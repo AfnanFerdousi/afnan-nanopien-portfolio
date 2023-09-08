@@ -1,6 +1,9 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
 
-module.exports = nextConfig
+  images: {
+    domains: ['i.ibb.co'], // Add 'i.ibb.co' to the domains array
+  },
+};
+
+module.exports = nextConfig;

@@ -1,27 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    font-family: "Inconsolata", monospace;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background: rgb(5, 15, 37);
+ 
+}
+
+
+.blob-1 {
+    border-radius: 2000px;
+    background: linear-gradient(
+        281deg,
+        #ef4765 -150.49%,
+        rgba(239, 71, 232, 0) 112.28%
+    );
+     animation: fade-out 2s infinite alternate ease-in-out;
+}
+
+.blob-2 {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    left: 60%;
+    animation: fade-out 4s infinite alternate ease-in-out;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
 }
