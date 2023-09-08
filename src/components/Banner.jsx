@@ -1,3 +1,4 @@
+import randomBlob from '@/hooks/randomBlob';
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
@@ -19,6 +20,16 @@ const Banner = () => {
             typewriter.stop();
         };
     }, []);
+ 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            randomBlob(); 
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
 
     return (
         <>
@@ -28,7 +39,7 @@ const Banner = () => {
             <div className='h-screen w-screen relative overflow-hidden'>
                 {/* Blurry background */}
                 <div
-                    className='absolute inset-0 blob-1 '
+                    className='absolute inset-0 blob'
                     style={{ filter: 'blur(80px)' }} // Adjust the blur value as needed
                 ></div>
 

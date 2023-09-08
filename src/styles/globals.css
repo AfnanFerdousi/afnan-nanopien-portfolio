@@ -22,33 +22,44 @@ body {
     min-width: 320px;
     min-height: 100vh;
     background: rgb(5, 15, 37);
- 
+    overflow: hidden; /* Prevent scrollbars */
 }
 
+.blob-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
-.blob-1 {
-    border-radius: 2000px;
+.blob {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     background: linear-gradient(
         281deg,
-        #ef4765 -150.49%,
+        #ef4765 80.49%,
         rgba(239, 71, 232, 0) 112.28%
     );
-     animation: fade-out 2s infinite alternate ease-in-out;
+    animation: blink 4s infinite alternate ease-in-out, move 4s infinite alternate ease-in-out;
+    position: absolute;
+    opacity: 0;
 }
 
-.blob-2 {
-    width: 150px;
-    height: 150px;
-    top: 40%;
-    left: 60%;
-    animation: fade-out 4s infinite alternate ease-in-out;
-}
-
-@keyframes fade-out {
-    0% {
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
         opacity: 0.8;
     }
-    100% {
-        opacity: 0;
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+    }
+    50% {
+        --x: calc((random() * 80) - 40);
+        --y: calc((random() * 80) - 40);
     }
 }
