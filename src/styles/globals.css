@@ -17,14 +17,27 @@ body {
     font-family: "Montserrat", sans-serif;
     font-family: "Raleway", sans-serif;
     margin: 0;
-    display: flex;
+    /* display: flex; */
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
     background: rgb(5, 15, 37);
-    overflow: hidden; /* Prevent scrollbars */
+     overflow-x: hidden;
+    scrollbar-width: thin; /* For Firefox */
+ 
+}
+body::-webkit-scrollbar {
+    width: 8px; 
+}
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,rgba(236, 83, 142, .3), rgba(163, 71, 239, .10));
+    border-radius: 10px; /* Adjust the radius as needed */
 }
 
+/* Style the scrollbar track with a gradient background */
+body::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #0c2150, rgba(163, 71, 239, .10));
+}
 .blob-container {
     position: relative;
     width: 100%;
@@ -43,6 +56,8 @@ body {
     animation: blink 4s infinite alternate ease-in-out, move 4s infinite alternate ease-in-out;
     position: absolute;
     opacity: 0;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes blink {

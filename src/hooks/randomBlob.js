@@ -1,4 +1,3 @@
-// script.js
 const randomizeBlobPosition = () => {
     const blob = document.querySelector('.blob');
     const container = document.querySelector('.h-screen');
@@ -10,8 +9,11 @@ const randomizeBlobPosition = () => {
         const randomX = Math.random() * maxX;
         const randomY = Math.random() * maxY;
 
-        blob.style.transition = '4s'; // Add smooth transition
+        // Add smooth transition for the initial position setup
+        blob.style.transition = '4s';
         blob.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        console.log(`Random X: ${randomX}px, Random Y: ${randomY}px`);
+
     }
 };
 

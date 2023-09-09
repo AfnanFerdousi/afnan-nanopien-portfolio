@@ -1,8 +1,8 @@
+import React, { useEffect } from 'react';
+import Typewriter from 'typewriter-effect/dist/core';
 import randomBlob from '@/hooks/randomBlob';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useEffect } from 'react';
-import Typewriter from 'typewriter-effect/dist/core'; // Import the Typewriter component
 
 const Banner = () => {
     useEffect(() => {
@@ -20,10 +20,11 @@ const Banner = () => {
             typewriter.stop();
         };
     }, []);
- 
+
     useEffect(() => {
+        // Change blob position every 4 seconds
         const intervalId = setInterval(() => {
-            randomBlob(); 
+            randomBlob();
         }, 4000);
 
         return () => {
@@ -40,7 +41,7 @@ const Banner = () => {
                 {/* Blurry background */}
                 <div
                     className='absolute inset-0 blob'
-                    style={{ filter: 'blur(80px)' }} // Adjust the blur value as needed
+                    style={{ filter: 'blur(80px)' }}
                 ></div>
 
                 {/* Content */}
@@ -64,7 +65,6 @@ const Banner = () => {
                     </h1>
 
                     <div className='mt-8 text-Raleway text-[#fff] text-5xl'>
-                        {/* The typewriter effect will be applied here */}
                         <h2 id="typewriter-container"></h2>
                     </div>
                 </div>
