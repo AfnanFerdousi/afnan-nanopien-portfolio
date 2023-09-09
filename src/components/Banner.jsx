@@ -37,7 +37,7 @@ const Banner = () => {
             <Head>
                 <title>Afnan || Nanopien</title>
             </Head>
-            <div className='h-screen w-screen relative overflow-hidden'>
+            <div className='h-[90vh] w-screen relative overflow-hidden'>
                 {/* Blurry background */}
                 <div
                     className='absolute inset-0 blob'
