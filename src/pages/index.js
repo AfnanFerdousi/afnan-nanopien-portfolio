@@ -3,6 +3,7 @@ import Banner from '@/components/Banner';
 import Image from 'next/image';
 import bubble from '../../public/bubble.png';
 import Service from '@/components/Service';
+import Resume from '@/components/Resume';
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       <div className='relative'>
         <Banner data-aos="fade-down" />
         <Stats className='' />
-        <Service/>
+        <Service />
+        <Resume/>
         {/* Stick the GIF to the bottom-right corner */}
         <div className="fixed bottom-0 right-0 z-20">
           <div >
