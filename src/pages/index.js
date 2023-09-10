@@ -4,6 +4,7 @@ import Image from 'next/image';
 import bubble from '../../public/bubble.png';
 import Service from '@/components/Service';
 import Resume from '@/components/Resume';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
         <Banner data-aos="fade-down" />
         <Stats className='' />
         <Service />
-        <Resume/>
+        <Resume />
+        <Projects/>
         {/* Stick the GIF to the bottom-right corner */}
         <div className="fixed bottom-0 right-0 z-20">
           <div >
