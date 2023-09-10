@@ -54,7 +54,8 @@ const Projects = () => {
 return (
     <div
         data-aos="fade-up"
-        data-aos-duration="3000">
+        data-aos-duration="3000"
+        className='py-12'>
             <h2 className='text-5xl font-montserrat font-semibold text-[#fff] text-center'>
                 Let’s check my projects
             </h2>
@@ -105,7 +106,6 @@ return (
         >
             Show All
         </button>
-
         </div>
     );
 };
