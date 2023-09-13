@@ -43,7 +43,7 @@ const Service = () => {
                     Expertise service!
                     <span>Let’s check it out.</span>
                 </h2>
-                <p className="font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:mt-0 mt-4">
+                <p className="font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] lg:md:text-start text-center lg:md:mt-0 mt-4">
                     As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies. I am enthusiastic about taking on new challenges. I am enthusiastic about taking on new challenges.
                 </p>
             </div>

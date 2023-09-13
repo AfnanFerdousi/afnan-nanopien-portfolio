@@ -39,12 +39,12 @@ const Blog = ({ blog }) => {
                     ))}
                 </div>
             <Link href={`/blogs/${blog._id}`}>
-                <h2 className='font-montserrat font-semibold lg:md:text-2xl text-xl text-[#FFFFFF] mb-4'>
+                <h2 className='text-start font-montserrat font-semibold lg:md:text-2xl text-xl text-[#FFFFFF] mb-4'>
                     {blog.title}
                 </h2>
             </Link>
 
-                <p className='text-[#C4C4C4]'>
+                <p className='text-[#C4C4C4] text-start'>
                     {daysSinceCreation === 0
                         ? 'Created today'
                         : `Created ${daysSinceCreation} ${daysSinceCreation === 1 ? 'day' : 'days'

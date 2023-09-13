@@ -37,7 +37,7 @@ const Stats = () => {
                         </div>
                         <div className="pb-8">
                             <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
-                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
+                            <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@ const Stats = () => {
                         </div>
                         <div className="pt-8">
                             <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
-                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
+                            <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ const Stats = () => {
                         </div>
                         <div className="pb-8">
                             <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
-                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
+                            <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
                     <hr className="lg:md:w-42 lg:md:block hidden  border-t-2 border-gray-700" /> {/* Add a short horizontal line here */}
@@ -80,7 +80,7 @@ const Stats = () => {
                         </div>
                         <div className="pt-8">
                             <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
-                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
+                            <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
                 </div>

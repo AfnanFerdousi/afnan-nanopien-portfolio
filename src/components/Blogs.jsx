@@ -35,10 +35,10 @@ const Blogs = ({ limit }) => {
             data-aos="fade-up"
             data-aos-duration="3000"
             className='px-10 lg:md:py-40 py-20 text-center'>
-            <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff]'>
+            <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center'>
                 Let’s check my Blogs
             </h2>
-            <p className='font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:mt-0 mt-4'>As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies.</p>
+            <p className='font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:my-4  mx-auto'>As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies.</p>
             {
                 isSmMd ? (
                     <Swiper
