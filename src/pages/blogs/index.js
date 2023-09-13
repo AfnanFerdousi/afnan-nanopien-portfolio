@@ -1,5 +1,6 @@
 import AllBlogs from '@/components/AllBlogs';
 import GIF from '@/components/shared/GIF';
+import HomeIcon from '@/components/shared/HomeIcon';
 import React from 'react';
 
 const Blog = () => {
