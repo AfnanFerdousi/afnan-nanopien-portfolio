@@ -2,9 +2,14 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Blog from './shared/Blog';
 import { useRouter } from 'next/router';
+import { useMediaQuery } from 'react-responsive';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 const Blogs = ({ limit }) => {
-    console.log(limit)
+    const isSmMd = useMediaQuery({ query: '(max-width: 768px)' });
     const [blogs, setBlogs] = useState([]);
     const router = useRouter();
 
@@ -29,16 +34,29 @@ const Blogs = ({ limit }) => {
         <div
             data-aos="fade-up"
             data-aos-duration="3000"
-            className='px-10 lg:md:py-40 py-20'>
-            <h2 className='text-5xl font-montserrat font-semibold text-[#fff] text-center'>
+            className='px-10 lg:md:py-40 py-20 text-center'>
+            <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff]'>
                 Let’s check my Blogs
             </h2>
-            <p className='text-md text-[#C4C4C4] text-center mt-4 w-[40%] mb-8 mx-auto'>As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies.</p>
-            <div className="grid lg:md:grid-cols-3 grid-cols-1 pb-8 gap-5">
-                {
-                    displayedBlogs.map(blog => <Blog key={blog._id} blog={blog}></Blog>)
-                }
-            </div>
+            <p className='font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:mt-0 mt-4'>As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies.</p>
+            {
+                isSmMd ? (
+                    <Swiper
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                        pagination={true} modules={[Pagination]} className="mySwiper lg:md:mt-0 mt-10">
+                        {
+                            displayedBlogs.map(blog => <SwiperSlide key={blog._id} className=" pb-8"><Blog blog={blog}></Blog></SwiperSlide>)
+                        }
+                    </Swiper>
+                ) : (
+                    <div className="grid lg:md:grid-cols-3 grid-cols-1 pb-8 gap-5">
+                        {
+                            displayedBlogs.map(blog => <Blog key={blog._id} blog={blog}></Blog>)
+                        }
+                    </div>
+                )
+            }
             {router.pathname !== '/blogs' && (
                 <button
                     onClick={() => router.push('/blogs')}

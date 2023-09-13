@@ -20,7 +20,7 @@ const Blog = ({ blog }) => {
     return (
         <div style={{ background: 'rgba(217, 217, 217, 0.1)' }} className='p-4 rounded-xl flex flex-col items-center'>
             <Image
-                className='rounded-xl h-[50vh] w-full'
+                className='rounded-xl lg:md:h-[50vh] h-[35vh] w-full'
                 src={blog.image}
                 alt={blog.title}
                 width={300}
@@ -31,7 +31,7 @@ const Blog = ({ blog }) => {
                 <div className='flex items-center gap-x-4 py-4'>
                     {blog.tags.map((tag) => (
                         <h2
-                            className='text-[#E0DEDE] bg-[rgba(217,217,217,0.1)] p-2 font-montserrat font-normal text-md rounded-xl'
+                            className='text-[#E0DEDE] bg-[rgba(217,217,217,0.1)] p-2 font-montserrat font-normal lg:md:text-md text-[12px] rounded-xl'
                             key={tag}
                         >
                             {tag}
@@ -39,7 +39,7 @@ const Blog = ({ blog }) => {
                     ))}
                 </div>
             <Link href={`/blogs/${blog._id}`}>
-                <h2 className='font-montserrat font-semibold text-2xl text-[#FFFFFF] mb-4'>
+                <h2 className='font-montserrat font-semibold lg:md:text-2xl text-xl text-[#FFFFFF] mb-4'>
                     {blog.title}
                 </h2>
             </Link>

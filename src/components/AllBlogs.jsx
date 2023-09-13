@@ -31,7 +31,7 @@ const AllBlogs = () => {
                 data-aos-duration="2000"
                 className="grid lg:md:grid-cols-3 grid-cols-1 pb-8 gap-5">
                 {
-                    blogs.map(blog => <Blog key={blog._id} blog={blog}></Blog>)
+                    blogs.map(blog =>  <Blog key={blog._id} blog={blog}></Blog>)
                 }
             </div>
           
