@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Blog = ({ blog }) => {
@@ -37,9 +38,12 @@ const Blog = ({ blog }) => {
                         </h2>
                     ))}
                 </div>
+            <Link href={`/blogs/${blog._id}`}>
                 <h2 className='font-montserrat font-semibold text-2xl text-[#FFFFFF] mb-4'>
                     {blog.title}
                 </h2>
+            </Link>
+
                 <p className='text-[#C4C4C4]'>
                     {daysSinceCreation === 0
                         ? 'Created today'

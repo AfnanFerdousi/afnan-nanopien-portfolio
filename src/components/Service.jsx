@@ -34,16 +34,16 @@ const Service = () => {
     ];
 
     return (
-        <div className="px-8 py-40">
+        <div className="px-8 lg:md:py-40 py-20">
             <div
                 data-aos="fade-down"
                 data-aos-duration="2000"
                 className="lg:md:flex justify-between lg:md:text-start text-center">
-                <h2 className="font-Raleway font-bold lg:md:text-5xl text-4xl flex flex-col text-[#fff]">
+                <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff]">
                     Expertise service!
                     <span>Let’s check it out.</span>
                 </h2>
-                <p className="font-montserrat text-lg text-[#C4C4C4] lg:md:w-[50%] w-[100%]">
+                <p className="font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:mt-0 mt-4">
                     As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies. I am enthusiastic about taking on new challenges. I am enthusiastic about taking on new challenges.
                 </p>
             </div>
@@ -51,7 +51,7 @@ const Service = () => {
                 <Swiper
                     data-aos="fade-up"
                     data-aos-duration="2000"
-                    pagination={true} modules={[Pagination]} className="mySwiper">
+                    pagination={true} modules={[Pagination]} className="mySwiper lg:md:mt-0 mt-10">
                     <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[25px] mt-16'>
                         {datas?.map((data) => (
                             <SwiperSlide key={data?.id}>

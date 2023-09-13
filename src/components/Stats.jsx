@@ -25,30 +25,30 @@ const Stats = () => {
     ];
     return (
         <div>
-            <div className='flex items-center justify-center px-8 h-[80vh] gap-[8rem]'>
+            <div className='flex items-center justify-center px-8 lg:md:h-[80vh] h-[50vh] lg:md:gap-[8rem] gap-[3rem]'>
                 <div data-aos="fade-right"
                     data-aos-duration="3000"
                     data-aos-offset="100"
                     // data-aos-easing="ease-in-sine"
                 >
                     <div className="relative flex flex-col items-end">
-                        <div className="absolute top-0 right-[-32px]">
-                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} />
+                        <div className="absolute top-0 lg:md:right-[-32px] right-[12px]">
+                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pb-8">
-                            <h2 className='font-montserrat font-semibold text-8xl'>100</h2>
-                            <p>Projects Finished</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
+                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
 
-                    <hr className="w-42  border-t-2 border-gray-700" /> {/* Add a short horizontal line here */}
+                    <hr className="lg:md:w-42 lg:md:block hidden border-t-2 border-gray-700" /> {/* Add a short horizontal line here */}
                     <div className="relative flex flex-col items-end">
-                        <div className="absolute top-[30px] right-[-32px]">
-                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} />
+                        <div className="absolute top-[30px] lg:md:right-[-32px] right-[12px]">
+                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pt-8">
-                            <h2 className='font-montserrat font-semibold text-8xl'>100</h2>
-                            <p>Projects Finished</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
+                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
                 </div>
@@ -65,22 +65,22 @@ const Stats = () => {
                     // data-aos-easing="ease-in-sine"
                 >
                     <div className="relative flex flex-col items-end">
-                        <div className="absolute top-0 right-[-32px]">
-                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} />
+                        <div className="absolute top-0 lg:md:right-[-32px] right-[12px]">
+                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pb-8">
-                            <h2 className='font-montserrat font-semibold text-8xl'>100</h2>
-                            <p>Projects Finished</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
+                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
-                    <hr className="w-46  border-t-2 border-gray-700" /> {/* Add a short horizontal line here */}
+                    <hr className="lg:md:w-42 lg:md:block hidden  border-t-2 border-gray-700" /> {/* Add a short horizontal line here */}
                     <div className="relative flex flex-col items-end">
-                        <div className="absolute top-[30px] right-[-32px]">
-                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} />
+                        <div className="absolute top-[30px] lg:md:right-[-32px] right-[12px]">
+                            <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pt-8">
-                            <h2 className='font-montserrat font-semibold text-8xl'>100</h2>
-                            <p>Projects Finished</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
+                            <p className="lg:md:text-md text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
                 </div>
@@ -91,15 +91,15 @@ const Stats = () => {
                 data-aos="fade-zoom-in"
                 data-aos-duration="3000"
                 className="my-28 px-[40px]">
-                <div className="grid lg:md:grid-cols-4 grid-cols-2 lg:md:gap-[32px] gap-2 items-center justify-center">
+                <div className="grid lg:md:grid-cols-4 grid-cols-2 lg:md:gap-[32px] gap-2 items-center lg:md:justify-center justify-even">
                     {socials.map((social, index) => (
                         <div
                             style={{ background: 'rgba(217, 217, 217, 0.1)' }}
-                            className="cursor-pointer rounded-xl px-24 py-[10px] mx-auto h-[100%] flex items-center"
+                            className="cursor-pointer rounded-xl lg:md:px-24 px-8 py-[10px] mx-auto lg:md:h-[100%] h-[70px] flex items-center"
                             key={index}
                         >
                             <a href={social.link} target="_blank" rel="noopener noreferrer">
-                                <Image src={social.icon} alt={`Social Media ${index}`} width={150} height={40} />
+                                <Image src={social.icon} alt={`Social Media ${index}`} className="" width={150} height={40} />
                             </a>
                         </div>
                     ))}

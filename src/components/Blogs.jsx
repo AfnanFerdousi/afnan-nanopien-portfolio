@@ -29,7 +29,7 @@ const Blogs = ({ limit }) => {
         <div
             data-aos="fade-up"
             data-aos-duration="3000"
-            className='px-10 py-40'>
+            className='px-10 lg:md:py-40 py-20'>
             <h2 className='text-5xl font-montserrat font-semibold text-[#fff] text-center'>
                 Let’s check my Blogs
             </h2>

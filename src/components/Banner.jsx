@@ -54,7 +54,7 @@ const Banner = () => {
             <Head>
                 <title>Afnan || Nanopien</title>
             </Head>
-            <div className='h-screen w-screen relative overflow-hidden'>
+            <div className='lg:md:h-screen h-[80vh] w-screen relative overflow-hidden'>
                 {/* Blurry background */}
                 <div
                     ref={blobRef}
@@ -82,7 +82,7 @@ const Banner = () => {
                         Afnan Ferdousi
                     </h1>
 
-                    <div className='mt-8 text-Raleway text-[#fff] text-5xl'>
+                    <div className='mt-8 text-Raleway text-[#fff] lg:md:text-5xl text-3xl'>
                         <h2 id="typewriter-container"></h2>
                     </div>
                 </div>

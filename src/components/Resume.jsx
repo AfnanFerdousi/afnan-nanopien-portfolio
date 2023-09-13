@@ -101,7 +101,7 @@ const Resume = () => {
         <div
             data-aos="fade-up"
             data-aos-duration="2000"
-            className="px-10 py-40">
+            className="px-10 lg:md:py-40 py-20">
             <div className="rounded-xl px-6 py-12" style={{ background: 'rgba(217, 217, 217, 0.1)' }}>
                 {/* header */}
                 <div className="flex items-center justify-between">
@@ -110,35 +110,36 @@ const Resume = () => {
                 </div>
 
                 {/* content part 1 */}
-                <div className="grid grid-cols-2 lg:md:gap-x-28 py-8">
+                <div className="grid lg:md:grid-cols-2 lg:md:gap-x-28 py-8">
                     <div>
                         <div className="flex items-center justify-between pb-6">
                             <h2 className="flex flex-col font-montserrat">
-                                <span className="text-xl font-medium text-[#fff]">Afnan Ferdousi</span>
-                                <span className="text-md text-[#C4C4C4]">MERN Stack Developer</span>
+                                <span className="lg:md:text-xl text-lg font-medium text-[#fff]">Afnan Ferdousi</span>
+                                <span className="lg:md:text-md text-[12px] text-[#C4C4C4]">MERN Stack Developer</span>
                             </h2>
                             <h2 className="font-montserrat flex items-center gap-x-2">
-                                <span className="text-[#EF4765] text-6xl font-bold">2</span>
-                                <span className="flex flex-col text-[#C4C4C4] text-md">
+                                <span className="text-[#EF4765] lg:md:text-6xl text-5xl font-bold">2</span>
+                                <span className="flex flex-col text-[#C4C4C4] lg:md:text-md text-[12px]">
                                     Years
                                     <span className="text-[#fff]">Experience </span>
                                 </span>
                             </h2>
                         </div>
                         <hr className="w-42  border-t-2 border-gray-700" />
-                        <p className="pt-6">
+                        <p className="pt-6 lg:md:text-[16px] text-[12px]">
                             As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies. I am enthusiastic about taking on new challenges.
                         </p>
                     </div>
+                    <hr className="w-42  border-t-2 border-gray-700 mt-12 mb-6 lg:md:hidden block" />
                     <div>
                         {experience.map((exp) => (
                             <div key={exp?.id}>
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h2 className="text-lg font-montserrat font-medium text-[#fff] mb-2">{exp?.title}</h2>
+                                        <h2 className="lg:md:text-lg text-md font-montserrat font-medium text-[#fff] mb-2">{exp?.title}</h2>
                                         <Image style={{ width: `${exp?.width}%` }} className={`h-auto`} src={exp?.logo} alt="ostad" width="" height="" />
                                     </div>
-                                    <h2 className={`py-2 px-6 text-[15px] font-medium rounded-lg ${exp?.date.includes('Present') ? 'bg-[#EF4765] text-[#E0DEDE]' : 'bg-[#343957] text-[#E0DEDE]'
+                                    <h2 className={`py-2 px-6 lg:md:text-[15px] text-[12px] font-medium rounded-lg ${exp?.date.includes('Present') ? 'bg-[#EF4765] text-[#E0DEDE]' : 'bg-[#343957] text-[#E0DEDE]'
                                         }`}>
                                         {exp?.date}
                                     </h2>
@@ -150,24 +151,24 @@ const Resume = () => {
                 </div>
 
                 {/* content part 2 */}
-                <div className="grid grid-cols-2 lg:md:gap-x-28 py-8">
+                <div className="grid lg:md:grid-cols-2 lg:md:gap-x-28 py-8">
                     <div>
-                        <h2 className='text-xl font-medium text-[#fff] font-montserrat '>Skills</h2>
+                        <h2 className='lg:md:text-xl text-lg font-medium text-[#fff] font-montserrat '>Skills</h2>
                         <hr className="w-42  border-t-2 border-gray-700 mb-6 mt-4" />
-                        <div className="grid lg:md:grid-cols-5 grid-cols-4 gap-4 items-center justify-between pb-6">
+                        <div className="grid lg:md:grid-cols-5 grid-cols-3 lg:md:gap-4  gap-2 items-center justify-between pb-6">
                             {
                                 skills.map((skill) => (
                                     <div key={skill} style={{ background: 'rgba(255, 255, 255, 0.12)' }} className='rounded-lg'>
-                                        <h2 className="text-md font-montserrat font-medium text-[#fff] p-2 text-center">{skill}</h2>
+                                        <h2 className="lg:md:text-md text-[12px] font-montserrat font-medium text-[#fff] p-2 text-center">{skill}</h2>
                                     </div>
                                 ))
                             }
                         </div>
                     </div>
                     <div>
-                        <h2 className='text-xl font-medium text-[#fff] font-montserrat '>Tools I use every day</h2>
+                        <h2 className='lg:md:text-xl text-lg font-medium text-[#fff] font-montserrat '>Tools I use every day</h2>
                         <hr className="w-42  border-t-2 border-gray-700 mb-6 mt-4" />
-                        <div className='grid lg:md:grid-cols-6 gap-4'>
+                        <div className='grid lg:md:grid-cols-6 grid-cols-4 gap-4'>
                             {tools.map((tool) => (
                                 <div key={tool?.id} className='rounded-lg'>
                                     <Image
@@ -185,10 +186,10 @@ const Resume = () => {
 
                 {/* content part 3 */}
                 <div>
-                    <h2 className='text-xl font-medium text-[#fff] font-montserrat '>Freelance clients</h2>
+                    <h2 className='lg:md:text-xl text-lg font-medium text-[#fff] font-montserrat '>Freelance clients</h2>
                     <hr className="w-42  border-t-2 border-gray-700 mb-6 mt-4" />
 
-                    <h2 className='text-2xl font-Raleway  '>Loading...</h2>
+                    <h2 className='lg:md:text-2xl text-xl font-Raleway  '>Loading...</h2>
                 </div>
             </div>
         </div>
