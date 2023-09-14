@@ -38,7 +38,13 @@ const Banner = () => {
             }
         };
 
+        const handleResize = () => {
+            randomizeBlobPosition();
+        };
+
         randomizeBlobPosition();
+
+        window.addEventListener('resize', handleResize);
 
         const intervalId = setInterval(() => {
             randomizeBlobPosition();
@@ -46,8 +52,10 @@ const Banner = () => {
 
         return () => {
             clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
+
 
     return (
         <>

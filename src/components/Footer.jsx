@@ -8,18 +8,18 @@ const Footer = () => {
                 <div className="flex items-center justify-between gap-x-8">
                     <div>
                         <h2 className="text-[#696f7c] font-bold font-montserrat text-md">Version</h2>
-                        <p className="text-[#ffff] font-bold font-montserrat text-md mt-2">September, 2023 © Edition 2</p>
+                        <p className="text-[#ffff] font-bold font-montserrat lg:md:text-md text-[12px] mt-2">September, 2023 © Edition 2</p>
                     </div>
 
                     <div>
                         <h2 className="text-[#696f7c] font-bold font-montserrat text-md">Local Time</h2>
-                        <p className="text-[#ffff] font-bold font-montserrat text-md mt-2">September, 2023 © Edition 2</p>
+                        <p className="text-[#ffff] font-bold font-montserrat lg:md:text-md text-[12px] mt-2">September, 2023 © Edition 2</p>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <h2 className="text-[#696f7c] font-bold font-montserrat text-md">Version</h2>
                     <p className="text-[#ffff] font-bold font-montserrat text-md mt-2">September, 2023 © Edition 2</p>
-                </div>
+                </div> */}
             </div>
         </div>
     );

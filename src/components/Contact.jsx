@@ -9,7 +9,7 @@ const Contact = () => {
 
   const sendEmail = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/v1/contact/sendEmail', data);
+      await axios.post('https://afnan-portfolio-server.vercel.app/api/v1/contact/sendEmail', data);
       toast.success('Email sent to Afnan 😃', {
         position: "top-right",
         autoClose: 5000,
@@ -20,6 +20,7 @@ const Contact = () => {
         progress: undefined,
         theme: "dark",
       });
+      reset();
     } catch (error) {
       // Handle errors (e.g., display an error message)
       toast.error("Couldn't send email 🤧", {
@@ -32,13 +33,16 @@ const Contact = () => {
         progress: undefined,
         theme: "dark",
       });
+      reset()
     }
   };
   return (
-    <div className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
+    <div 
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
       <div
-        // data-aos="fade-up"
-        // data-aos-duration="3000"
+       
         className="h-[50vh] text-center flex flex-col items-center justify-center py-10 "
       >
         <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center">
@@ -66,7 +70,7 @@ const Contact = () => {
               </button>
 
               <div className="mb-4 flex flex-col">
-                <label htmlFor="name" className="block text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
+                <label htmlFor="name" className=" text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
                   <span className="lg:md:text-lg text-md text-[#6f7582]">01</span>
                   <span>What’s your name?</span>                
                 </label>
@@ -74,7 +78,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-4 py-2"
+                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-8 py-2 px-4 border-[0px] border-transparent"
                   placeholder="Afnan Ferdousi*"
                   {...register("name", {
                     required: {
@@ -88,7 +92,7 @@ const Contact = () => {
               </div>
 
               <div className="mb-4 flex flex-col">
-                <label htmlFor="email" className="block text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
+                <label htmlFor="email" className=" text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
                   
                <span className="lg:md:text-lg text-md text-[#6f7582]">02</span>
                <span>What’s your email?</span>
@@ -97,7 +101,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-4 py-2"
+                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-8 py-2 px-4 border-[0px] border-transparent"
                   placeholder="afnan@gmail.com*"
                    {...register("email", {
                     required: {
@@ -111,14 +115,14 @@ const Contact = () => {
               </div>
 
               <div className="mb-4 flex flex-col">
-                <label htmlFor="message" className="block text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
+                <label htmlFor="message" className=" text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
                  <span className="lg:md:text-lg text-md text-[#6f7582]">03</span>
                  <span>Your message</span>
                 </label>
                 <textarea
                   name="message"
                   id="message"
-                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-4 py-2"
+                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-8 py-2 px-4 border-[0px] border-transparent"
                   placeholder="Hey Afnan, can you hwlp me with....*"
                     {...register("message", {
                     required: {

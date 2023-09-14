@@ -67,9 +67,9 @@ const Service = () => {
                                             <p className="font-montserrat text-md text-[#C4C4C4] pt-2">{data?.desc}</p>
                                         </div>
 
-                                        <button
+                                        {/* <button
                                         onClick={router.push(`/services/${data?._id}`)}
-                                         className="font-montserrat text-md font-bold text-[#fff] mb-10 flex ">Learn More <FiArrowUpRight className="text-2xl font-thin" /></button>
+                                         className="font-montserrat text-md font-bold text-[#fff] mb-10 flex ">Learn More <FiArrowUpRight className="text-2xl font-thin" /></button> */}
                                     </div>
                                 </div>
                             </SwiperSlide>
