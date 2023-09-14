@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
 import Head from 'next/head';
 import Image from 'next/image';
+import { randomBlob } from '@/hooks/randomBlob';
 
 const Banner = () => {
     const blobRef = useRef(null);
@@ -24,30 +25,17 @@ const Banner = () => {
 
     useEffect(() => {
         const blob = blobRef.current;
-
-        const randomizeBlobPosition = () => {
-            if (blob) {
-                const maxX = window.innerWidth - blob.clientWidth;
-                const maxY = window.innerHeight - blob.clientHeight;
-
-                const randomX = Math.random() * maxX;
-                const randomY = Math.random() * maxY;
-
-                blob.style.transition = '4s';
-                blob.style.transform = `translate(${randomX}px, ${randomY}px)`;
-            }
-        };
-
         const handleResize = () => {
-            randomizeBlobPosition();
+            randomBlob(blobRef);
         };
 
-        randomizeBlobPosition();
+        // Randomize the initial position
+        randomBlob(blobRef);
 
         window.addEventListener('resize', handleResize);
 
         const intervalId = setInterval(() => {
-            randomizeBlobPosition();
+            randomBlob(blobRef);
         }, 4000);
 
         return () => {
@@ -55,7 +43,6 @@ const Banner = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
 
     return (
         <>

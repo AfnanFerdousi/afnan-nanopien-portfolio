@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import dots from '../../public/dots.png';
 import ostad from '../../public/ostad.png';
 import ph from '../../public/ph.png';
 import genres from '../../public/genres.png';
+import { randomBlob } from '@/hooks/randomBlob';
 const Resume = () => {
     const experience = [
         {
@@ -96,12 +97,38 @@ const Resume = () => {
             logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png"
         }
     ]
+       const blobRef = useRef(null);
+    useEffect(() => {
+        const blob = blobRef.current;
+        const handleResize = () => {
+            randomBlob(blobRef);
+        };
+
+        // Randomize the initial position
+        randomBlob(blobRef);
+
+        window.addEventListener('resize', handleResize);
+
+        const intervalId = setInterval(() => {
+            randomBlob(blobRef);
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div
             data-aos="fade-up"
             data-aos-duration="2000"
             className="px-10 lg:md:py-40 py-20">
+                 <div
+                    ref={blobRef}
+                    className='blob2'
+                    style={{ filter: 'blur(100px)' }}
+                ></div>
             <div className="rounded-xl px-6 py-12" style={{ background: 'rgba(217, 217, 217, 0.1)' }}>
                 {/* header */}
                 <div className="flex items-center justify-between">

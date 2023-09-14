@@ -1,10 +1,13 @@
+import React, { useEffect, useRef } from 'react';
 import Image from "next/image";
 import fb from '../../public/fb.png'
 import github from '../../public/github.png'
 import insta from '../../public/insta.png'
 import linkedin from '../../public/linkedin.png'
+import { randomBlob } from '@/hooks/randomBlob';
 
 const Stats = () => {
+      
     const socials = [
         {
             icon: github,
@@ -23,9 +26,36 @@ const Stats = () => {
             link: "https://www.facebook.com/afnanferdousi2006"
         }
     ];
+    const blobRef = useRef(null);
+    useEffect(() => {
+        const blob = blobRef.current;
+        const handleResize = () => {
+            randomBlob(blobRef);
+        };
+
+        // Randomize the initial position
+        randomBlob(blobRef);
+
+        window.addEventListener('resize', handleResize);
+
+        const intervalId = setInterval(() => {
+            randomBlob(blobRef);
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <div>
+
             <div className='flex items-center justify-center px-8 lg:md:h-[80vh] h-[50vh] lg:md:gap-[8rem] gap-[3rem]'>
+                   <div
+                    ref={blobRef}
+                    className='blob2'
+                    style={{ filter: 'blur(80px)' }}
+                ></div>
                 <div data-aos="fade-right"
                     data-aos-duration="3000"
                     data-aos-offset="100"
@@ -95,7 +125,7 @@ const Stats = () => {
                     {socials.map((social, index) => (
                         <div
                             style={{ background: 'rgba(217, 217, 217, 0.1)' }}
-                            className="cursor-pointer rounded-xl lg:md:px-24 px-8 py-[10px] mx-auto lg:md:h-[100%] h-[70px] flex items-center"
+                            className="cursor-pointer rounded-xl lg:md:px-24 px-8 py-[10px] mx-auto lg:md:h-[100%] h-[70px] flex items-center transform transition-transform hover:scale-110"
                             key={index}
                         >
                             <a href={social.link} target="_blank" rel="noopener noreferrer">

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import Blog from './shared/Blog';
 import { useRouter } from 'next/router';
 import { useMediaQuery } from 'react-responsive';
@@ -7,9 +7,31 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import { randomBlob } from '@/hooks/randomBlob';
 
 const Blogs = ({ limit }) => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' });
+        const blobRef = useRef(null);
+    useEffect(() => {
+        const blob = blobRef.current;
+        const handleResize = () => {
+            randomBlob(blobRef);
+        };
+
+        // Randomize the initial position
+        randomBlob(blobRef);
+
+        window.addEventListener('resize', handleResize);
+
+        const intervalId = setInterval(() => {
+            randomBlob(blobRef);
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const [blogs, setBlogs] = useState([]);
     const router = useRouter();
 
@@ -35,6 +57,11 @@ const Blogs = ({ limit }) => {
             data-aos="fade-up"
             data-aos-duration="3000"
             className='px-10 lg:md:py-40 py-20 text-center'>
+                <div
+                    ref={blobRef}
+                    className='blob2'
+                    style={{ filter: 'blur(80px)' }}
+                ></div>
             <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center'>
                 Let’s check my Blogs
             </h2>

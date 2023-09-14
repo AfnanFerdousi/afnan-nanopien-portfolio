@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { BsCodeSlash } from 'react-icons/bs';
 import { RiEnglishInput } from 'react-icons/ri';
 import { MdClass } from 'react-icons/md';
@@ -9,9 +9,32 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { useMediaQuery } from 'react-responsive';
 import axios from 'axios';
+import { randomBlob } from '@/hooks/randomBlob';
+
 
 const Service = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' }); // Define your breakpoint here (e.g., 768px for sm and md devices)
+        const blobRef = useRef(null);
+    useEffect(() => {
+        const blob = blobRef.current;
+        const handleResize = () => {
+            randomBlob(blobRef);
+        };
+
+        // Randomize the initial position
+        randomBlob(blobRef);
+
+        window.addEventListener('resize', handleResize);
+
+        const intervalId = setInterval(() => {
+            randomBlob(blobRef);
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const [services, setServices] = useState([])
     const icons = {
         BsCodeSlash: <BsCodeSlash />,
@@ -33,8 +56,14 @@ const Service = () => {
         getServices();
     }, []);
 
+
     return (
         <div className="px-8 lg:md:py-40 py-20">
+             <div
+                    ref={blobRef}
+                    className='blob'
+                    style={{ filter: 'blur(80px)' }}
+                ></div>
             <div
                 data-aos="fade-down"
                 data-aos-duration="2000"

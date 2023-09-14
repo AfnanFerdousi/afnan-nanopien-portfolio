@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { randomBlob } from '@/hooks/randomBlob';
 
 
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm();
+  const blobRef = useRef(null);
+    useEffect(() => {
+        const blob = blobRef.current;
+        const handleResize = () => {
+            randomBlob(blobRef);
+        };
 
+        // Randomize the initial position
+        randomBlob(blobRef);
+
+        window.addEventListener('resize', handleResize);
+
+        const intervalId = setInterval(() => {
+            randomBlob(blobRef);
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
   const sendEmail = async (data) => {
     try {
       await axios.post('https://afnan-portfolio-server.vercel.app/api/v1/contact/sendEmail', data);
@@ -41,6 +62,11 @@ const Contact = () => {
       data-aos="fade-up"
       data-aos-duration="3000"
     className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
+      <div
+                    ref={blobRef}
+                    className='blob'
+                    style={{ filter: 'blur(80px)' }}
+                ></div>
       <div
        
         className="h-[50vh] text-center flex flex-col items-center justify-center py-10 "

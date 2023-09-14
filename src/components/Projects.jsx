@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { BsLaptop, BsArrowRightShort } from 'react-icons/bs';
@@ -8,9 +8,31 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import axios from 'axios';
+import { randomBlob } from '@/hooks/randomBlob';
 
 const Projects = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' });
+       const blobRef = useRef(null);
+    useEffect(() => {
+        const blob = blobRef.current;
+        const handleResize = () => {
+            randomBlob(blobRef);
+        };
+
+        // Randomize the initial position
+        randomBlob(blobRef);
+
+        window.addEventListener('resize', handleResize);
+
+        const intervalId = setInterval(() => {
+            randomBlob(blobRef);
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const [projects, setProjects] = useState([])
     // Mockup data for projects
   useEffect(() => {
@@ -32,6 +54,11 @@ const Projects = () => {
 console.log(projects)
     return (
         <div className="lg:md:py-40 py-20 px-8" >
+             <div
+                    ref={blobRef}
+                    className='blob'
+                    style={{ filter: 'blur(80px)' }}
+                ></div>
             <div
                 data-aos="fade-up"
                 data-aos-duration="3000"
