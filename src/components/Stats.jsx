@@ -100,7 +100,7 @@ const Stats = () => {
                             <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pb-8">
-                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>3</h2>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>03</h2>
                             <p className="lg:md:text-lg text-[12px] w-max">Company Collaboration</p>
                         </div>
                     </div>
