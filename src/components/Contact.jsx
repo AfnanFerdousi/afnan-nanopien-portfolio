@@ -64,7 +64,7 @@ const Contact = () => {
     className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
       <div
                     ref={blobRef}
-                    className='blob'
+                    className='blob w-[80px] h-[80px]'
                     style={{ filter: 'blur(80px)' }}
                 ></div>
       <div
