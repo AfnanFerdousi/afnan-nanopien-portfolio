@@ -49,11 +49,11 @@ const Banner = () => {
             <Head>
                 <title>Afnan || Nanopien</title>
             </Head>
-            <div className='lg:md:h-screen h-[80vh] w-screen relative '>
+            <div className='lg:md:h-screen h-[80vh] w-screen relative'>
                 {/* Blurry background */}
                 <div
                     ref={blobRef}
-                    className='blob'
+                    className='blob overflow-x-hidden'
                     style={{ filter: 'blur(80px)' }}
                 ></div>
 
@@ -78,7 +78,13 @@ const Banner = () => {
                     </h1>
 
                     <div className='mt-8 text-Raleway text-[#fff] lg:md:text-5xl text-3xl'>
-                        <h2 id="typewriter-container"></h2>
+                        <div
+                            id="typewriter-container"
+                            style={{
+                                height: '60px', // Set a fixed height for the container
+                                overflow: 'hidden', // Handle overflow
+                            }}
+                        ></div>
                     </div>
                 </div>
             </div>
