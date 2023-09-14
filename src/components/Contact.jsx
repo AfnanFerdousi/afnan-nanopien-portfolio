@@ -75,7 +75,7 @@ const Contact = () => {
         <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center">
           Let’s Work Together!
         </h2>
-        <p className="font-montserrat lg:md:text-lg text-[14px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] text-center my-4 mx-auto">
+        <p className="font-montserrat lg:md:text-lg text-[14px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] text-center my-4 mx-auto lg:md:px-0 px-2">
           Connect with Me: Reach Out for Collaboration, Questions, or Simply a Friendly Conversation - I'm Here to Hear from You
         </p>
 

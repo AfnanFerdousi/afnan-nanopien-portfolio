@@ -65,7 +65,7 @@ const Blogs = ({ limit }) => {
             <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center'>
                 Let’s check my Blogs
             </h2>
-            <p className='font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:my-4  mx-auto'>Embark on a Journey Through My Diverse and Informative Blog Posts, Where I Share Insights, Ideas, and Knowledge on Various Topics of Interest.</p>
+            <p className='font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] lg:md:text-start text-center lg:md:mt-0 mt-4'>Embark on a Journey Through My Diverse and Informative Blog Posts, Where I Share Insights, Ideas, and Knowledge on Various Topics of Interest.</p>
             {
                 isSmMd ? (
                     <Swiper

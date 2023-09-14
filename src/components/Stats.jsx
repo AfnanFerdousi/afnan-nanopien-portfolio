@@ -60,10 +60,11 @@ const Stats = () => {
                 <div data-aos="fade-right"
                     data-aos-duration="3000"
                     data-aos-offset="100"
+                    className='flex flex-col items-start'
                 // data-aos-easing="ease-in-sine"
                 >
                     <div className="relative flex flex-col items-end">
-                        <div className="absolute top-0 lg:md:right-[-32px] right-[12px]">
+                        <div className="absolute top-0 lg:md:right-[-32px] right-[23px]">
                             <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pb-8">
@@ -93,15 +94,16 @@ const Stats = () => {
                 <div data-aos="fade-left"
                     data-aos-duration="3000"
                     data-aos-offset="100"
+                    className="flex flex-col items-end"
                 // data-aos-easing="ease-in-sine"
                 >
                     <div className="relative flex flex-col items-end">
-                        <div className="absolute top-0 lg:md:right-[-32px] right-[12px]">
+                        <div className="absolute  lg:md:right-[-32px] right-[-3px]">
                             <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pb-8">
-                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl text-end pr-[5px]'>03</h2>
-                            <p className="lg:md:text-lg text-[12px] w-max">Company Collaboration</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>03</h2>
+                            <p className="lg:md:text-lg text-[12px] w-max">Companies</p>
                         </div>
                     </div>
                     <hr className="lg:md:w-42 lg:md:block hidden  border-t-2 border-gray-700" /> {/* Add a short horizontal line here */}
