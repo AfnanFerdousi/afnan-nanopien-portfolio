@@ -8,10 +8,17 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { useMediaQuery } from 'react-responsive';
+import axios from 'axios';
 
 const Service = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' }); // Define your breakpoint here (e.g., 768px for sm and md devices)
-        const [services, setServices] = useState([])
+    const [services, setServices] = useState([])
+    const icons = {
+        BsCodeSlash: <BsCodeSlash />,
+        RiEnglishInput: <RiEnglishInput />,
+        MdClass: <MdClass />,
+        FiArrowUpRight: <FiArrowUpRight />,
+    };
       useEffect(() => {
         const getServices = async () => {
             try {
@@ -53,7 +60,7 @@ const Service = () => {
                                     style={{ background: 'rgba(217, 217, 217, 0.1)' }}
                                 >
                                     <div className="">
-                                        <h2 className="w-fit p-[10px] text-4xl rounded-full border-[#fff] border-[2px] text-[#fff]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>{data?.icon}</h2>
+                                        <h2 className="w-fit p-[10px] text-4xl rounded-full border-[#fff] border-[2px] text-[#fff]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>{icons[data?.icon]} </h2>
 
                                         <div className="py-10">
                                             <h2 className="font-Raleway font-semibold text-2xl text-[#fff] ">{data?.title}</h2>
@@ -77,7 +84,7 @@ const Service = () => {
                     {services?.map((data) => (
                         <div key={data?._id} className="p-6 rounded-xl serviceCard " style={{ background: 'rgba(217, 217, 217, 0.1)' }}>
                             <div className="">
-                                <h2 className="w-fit p-[10px] text-4xl rounded-full border-[#fff] border-[2px] text-[#fff]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>{data?.icon}</h2>
+                                <h2 className="w-fit p-[10px] text-4xl rounded-full border-[#fff] border-[2px] text-[#fff]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>{icons[data?.icon]} </h2>
 
                                 <div className="py-10">
                                     <h2 className="font-Raleway font-semibold text-2xl text-[#fff] ">{data?.title}</h2>

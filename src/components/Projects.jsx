@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import axios from 'axios';
 
 const Projects = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' });
@@ -28,7 +29,7 @@ const Projects = () => {
     // Define different card sizes based on position
      const displayedProjects = projects && projects?.length > 0 ? projects.slice(0, 5) : [];
     const cardSizes = ['w-1/2', 'w-1/3', 'w-1/4', 'w-1/3', 'w-1/4'];
-
+console.log(projects)
     return (
         <div className="lg:md:py-40 py-20 px-8" >
             <div
