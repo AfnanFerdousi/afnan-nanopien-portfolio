@@ -7,7 +7,7 @@ import linkedin from '../../public/linkedin.png'
 import { randomBlob } from '@/hooks/randomBlob';
 
 const Stats = () => {
-      
+
     const socials = [
         {
             icon: github,
@@ -51,15 +51,15 @@ const Stats = () => {
         <div>
 
             <div className='flex items-center justify-center px-8 lg:md:h-[80vh] h-[50vh] lg:md:gap-[8rem] gap-[3rem]'>
-                   <div
+                <div
                     ref={blobRef}
                     className='blob2'
-                    style={{ filter: 'blur(80px)' }}
+                    style={{ filter: 'blur(100px)' }}
                 ></div>
                 <div data-aos="fade-right"
                     data-aos-duration="3000"
                     data-aos-offset="100"
-                    // data-aos-easing="ease-in-sine"
+                // data-aos-easing="ease-in-sine"
                 >
                     <div className="relative flex flex-col items-end">
                         <div className="absolute top-0 lg:md:right-[-32px] right-[12px]">
@@ -82,17 +82,17 @@ const Stats = () => {
                         </div>
                     </div>
                 </div>
-                <div 
-                data-aos="fade-down" 
-                data-aos-duration="4000" 
+                <div
+                    data-aos="fade-down"
+                    data-aos-duration="4000"
                     data-aos-easing="ease-in-sine"
-                    data-aos-offset="100"> 
+                    data-aos-offset="100">
                     <Image src="https://i.ibb.co/ccXwJLT/Group-61.png" alt="blob" height={200} width={200} />
                 </div>
-                <div data-aos="fade-left" 
-                data-aos-duration="3000"
+                <div data-aos="fade-left"
+                    data-aos-duration="3000"
                     data-aos-offset="100"
-                    // data-aos-easing="ease-in-sine"
+                // data-aos-easing="ease-in-sine"
                 >
                     <div className="relative flex flex-col items-end">
                         <div className="absolute top-0 lg:md:right-[-32px] right-[12px]">

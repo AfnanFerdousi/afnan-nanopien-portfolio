@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import dots from '../../public/dots.png';
@@ -153,8 +154,8 @@ const Resume = () => {
                             </h2>
                         </div>
                         <hr className="w-42  border-t-2 border-gray-700" />
-                        <p className="pt-6 lg:md:text-[16px] text-[12px]">
-                            As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies. I am enthusiastic about taking on new challenges.
+                        <p className="pt-6 lg:md:text-[16px] text-[12px]">                         
+                           I'm a young and energetic MERN Stack Developer who's passionate about learning and staying on the cutting edge of technology. I love picking up new skills quickly and staying in tune with the latest industry trends. My main goal is to use my skills to make a positive impact in the world. In addition to my technical abilities, I'm a great communicator, which helps me collaborate effectively with diverse teams. I bridge the gap between developers and other stakeholders to ensure successful projects. I'm committed to using my knowledge to create solutions that not only meet but surpass user and client expectations, ultimately making a real difference in the digital world.
                         </p>
                     </div>
                     <hr className="w-42  border-t-2 border-gray-700 mt-12 mb-6 lg:md:hidden block" />

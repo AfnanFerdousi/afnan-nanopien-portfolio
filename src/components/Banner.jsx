@@ -49,7 +49,7 @@ const Banner = () => {
             <Head>
                 <title>Afnan || Nanopien</title>
             </Head>
-            <div className='lg:md:h-screen h-[80vh] w-screen relative overflow-hidden'>
+            <div className='lg:md:h-screen h-[80vh] w-screen relative '>
                 {/* Blurry background */}
                 <div
                     ref={blobRef}

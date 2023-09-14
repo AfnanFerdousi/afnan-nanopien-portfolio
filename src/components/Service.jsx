@@ -14,7 +14,7 @@ import { randomBlob } from '@/hooks/randomBlob';
 
 const Service = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' }); // Define your breakpoint here (e.g., 768px for sm and md devices)
-        const blobRef = useRef(null);
+    const blobRef = useRef(null);
     useEffect(() => {
         const blob = blobRef.current;
         const handleResize = () => {
@@ -42,7 +42,7 @@ const Service = () => {
         MdClass: <MdClass />,
         FiArrowUpRight: <FiArrowUpRight />,
     };
-      useEffect(() => {
+    useEffect(() => {
         const getServices = async () => {
             try {
                 const res = await axios.get('https://afnan-portfolio-server.vercel.app/api/v1/services');
@@ -59,11 +59,11 @@ const Service = () => {
 
     return (
         <div className="px-8 lg:md:py-40 py-20">
-             <div
-                    ref={blobRef}
-                    className='blob'
-                    style={{ filter: 'blur(80px)' }}
-                ></div>
+            <div
+                ref={blobRef}
+                className='blob'
+                style={{ filter: 'blur(100px)' }}
+            ></div>
             <div
                 data-aos="fade-down"
                 data-aos-duration="2000"

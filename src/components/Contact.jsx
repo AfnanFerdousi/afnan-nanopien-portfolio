@@ -6,7 +6,7 @@ import { randomBlob } from '@/hooks/randomBlob';
 
 
 const Contact = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit,reset, errors } = useForm();
   const blobRef = useRef(null);
     useEffect(() => {
         const blob = blobRef.current;
@@ -65,7 +65,7 @@ const Contact = () => {
       <div
                     ref={blobRef}
                     className='blob w-[80px] h-[80px]'
-                    style={{ filter: 'blur(80px)' }}
+                    style={{ filter: 'blur(100px)' }}
                 ></div>
       <div
        
