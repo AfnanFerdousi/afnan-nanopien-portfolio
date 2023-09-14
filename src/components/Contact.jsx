@@ -79,7 +79,7 @@ const Contact = () => {
         </p>
 
         <button onClick={() => document.getElementById('my_modal_3').showModal()}
-          className='btn py-4 px-8 text-[15px] font-medium rounded-lg text-[#E0DEDE] border-[1px] border-[#E0DEDE] mx-auto flex justify-center transition duration-300 ease-in-out hover:bg-gray-500 hover:text-white hover:scale-105 bg-transparent'
+          className='btn py-4 px-8 text-[15px] font-medium rounded-lg text-[#E0DEDE] border-[1px] border-[#E0DEDE] mx-auto flex justify-center transition duration-300 ease-in-out hover:bg-transparent hover:border-[#fff] hover:text-white hover:scale-105 bg-transparent'
         >
           Why not!?
         </button>

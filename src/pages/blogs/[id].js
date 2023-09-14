@@ -1,12 +1,34 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react'; // Import useEffect from 'react'
+import React, { useState, useEffect,useRef } from 'react'; // Import useEffect from 'react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import GIF from '@/components/shared/GIF';
 import HomeIcon from '@/components/shared/HomeIcon';
+import { randomBlob } from '@/hooks/randomBlob';
 
 const SingleBlog = () => {
     const router = useRouter()
+      const blobRef = useRef(null);
+    useEffect(() => {
+        const blob = blobRef.current;
+        const handleResize = () => {
+            randomBlob(blobRef);
+        };
+
+        // Randomize the initial position
+        randomBlob(blobRef);
+
+        window.addEventListener('resize', handleResize);
+
+        const intervalId = setInterval(() => {
+            randomBlob(blobRef);
+        }, 4000);
+
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const [blog, setBlog] = useState([]);
     console.log(router)
     useEffect(() => {
@@ -38,6 +60,11 @@ const SingleBlog = () => {
     console.log(blog)
     return (
         <div style={{ background: '#0F192E' }} className=' rounded-xl flex flex-col items-center px-10 relative py-8'>
+             <div
+                    ref={blobRef}
+                    className='blob2'
+                    style={{ filter: 'blur(100px)' }}
+                ></div>
             <Image
                 className='rounded-xl lg:md:h-[80vh] h-[50vh] w-full'
                 src={blog.image}
