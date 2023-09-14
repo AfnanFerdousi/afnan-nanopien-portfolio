@@ -4,6 +4,8 @@ import Service from '@/components/Service';
 import Resume from '@/components/Resume';
 import Projects from '@/components/Projects';
 import Blogs from '@/components/Blogs';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 import GIF from '@/components/shared/GIF';
 
 export default function Home() {
@@ -16,6 +18,8 @@ export default function Home() {
         <Resume />
         <Projects />
         <Blogs limit="3"/>
+        <Contact/>
+        <Footer/>
         {/* Stick the GIF to the bottom-right corner */}
        <GIF/>
       </div>

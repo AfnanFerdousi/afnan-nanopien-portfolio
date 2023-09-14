@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { BsLaptop, BsArrowRightShort } from 'react-icons/bs';
@@ -10,10 +10,10 @@ import { Pagination } from 'swiper/modules';
 
 const Projects = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' });
+    const [projects, setProjects] = useState([])
     // Mockup data for projects
     const projects = [
         {
-            id: 1,
             title: "Project 1",
             description: "Description for Project 1",
             imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
@@ -21,7 +21,6 @@ const Projects = () => {
             githubLink: "https://github.com/yourusername/project1", // Replace with your GitHub link URL
         },
         {
-            id: 2,
             title: "Project 2",
             description: "Description for Project 2",
             imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
@@ -29,7 +28,6 @@ const Projects = () => {
             githubLink: "https://github.com/yourusername/project2", // Replace with your GitHub link URL
         },
         {
-            id: 3,
             title: "Project 3",
             description: "Description for Project 3",
             imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
@@ -37,7 +35,6 @@ const Projects = () => {
             githubLink: "https://github.com/yourusername/project3", // Replace with your GitHub link URL
         },
         {
-            id: 4,
             title: "Project 4",
             description: "Description for Project 4",
             imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
@@ -45,7 +42,6 @@ const Projects = () => {
             githubLink: "https://github.com/yourusername/project4", // Replace with your GitHub link URL
         },
         {
-            id: 5,
             title: "Project 5",
             description: "Description for Project 5",
             imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
@@ -53,8 +49,21 @@ const Projects = () => {
             githubLink: "https://github.com/yourusername/project5", // Replace with your GitHub link URL
         },
     ];
+  useEffect(() => {
+        const getProjects = async () => {
+            try {
+                const res = await axios.get('https://afnan-portfolio-server.vercel.app/api/v1/projects');
+                console.log(res?.data?.data)
+                setProjects(res?.data?.data);
+            } catch (error) {
+                console.error('Error fetching projects:', error);
+            }
+        };
 
+        getProjects();
+    }, []);
     // Define different card sizes based on position
+     const displayedProjects = projects && projects?.length > 0 ? projects.slice(0, 5) : [];
     const cardSizes = ['w-1/2', 'w-1/3', 'w-1/4', 'w-1/3', 'w-1/4'];
 
     return (
@@ -73,8 +82,8 @@ const Projects = () => {
                             data-aos="fade-up"
                             data-aos-duration="2000"
                             pagination={true} modules={[Pagination]} className="mySwiper lg:md:mt-0 mt-10">
-                            {projects.map((project, index) => (
-                                <SwiperSlide key={project.id} className=" pb-4">
+                            {displayedProjects.map((project, index) => (
+                                <SwiperSlide key={project._id} className=" pb-4">
                                     <div className={`mx-2 py-4 h-full cursor-pointer`} >
                                         <div className="relative bg-gray-700 shadow-lg rounded-lg overflow-hidden group transition-transform transform scale-100 hover:scale-105 hover:shadow hover:bg-[#333]">
                                             <Image
@@ -117,8 +126,8 @@ const Projects = () => {
                         </Swiper>
                     ) : (
                         <div className="flex flex-wrap justify-center pb-8">
-                            {projects.map((project, index) => (
-                                <div key={project.id} className={`mx-2 py-4 h-full cursor-pointer ${cardSizes[index]}`} >
+                            {displayedProjects.map((project, index) => (
+                                <div key={project._id} className={`mx-2 py-4 h-full cursor-pointer ${cardSizes[index]}`} >
                                     <div className="relative bg-gray-700 shadow-lg rounded-lg overflow-hidden group transition-transform transform scale-100 hover:scale-105 hover:shadow hover:bg-[#333]">
                                         <Image
                                             src={project.imageUrl}
