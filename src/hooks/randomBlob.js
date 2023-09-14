@@ -4,7 +4,7 @@ export const randomBlob = (blobRef) => {
     if (blob) {
         const maxWidthForFixedPosition = 480; // Define the maximum width for fixed position
         const maxLimit = 100; // Define the maximum limit for randomX and randomY
-        const maxPosition = 95; 
+        const maxPosition = 85; 
         // Get the dimensions of the screen and the blob element
         const screenRect = document.body.getBoundingClientRect();
         const blobRect = blob.getBoundingClientRect();
