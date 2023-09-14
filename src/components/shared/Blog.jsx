@@ -18,7 +18,7 @@ const Blog = ({ blog }) => {
     const daysSinceCreation = getTimeDifference(blog.createdAt);
 
     return (
-        <div style={{ background: 'rgba(217, 217, 217, 0.1)' }} className='p-4 rounded-xl flex flex-col items-center'>
+        <div style={{ background: 'rgba(217, 217, 217, 0.1)' }} className='p-4 rounded-xl flex flex-col '>
             <Image
                 className='rounded-xl lg:md:h-[50vh] h-[35vh] w-full'
                 src={blog.image}
@@ -28,7 +28,7 @@ const Blog = ({ blog }) => {
             />
 
             <div>
-                <div className='flex items-center gap-x-4 py-4'>
+                <div className='flex items-center gap-x-4 py-4 justify-start'>
                     {blog.tags.map((tag) => (
                         <h2
                             className='text-[#E0DEDE] bg-[rgba(217,217,217,0.1)] p-2 font-montserrat font-normal lg:md:text-md text-[12px] rounded-xl'
@@ -44,7 +44,7 @@ const Blog = ({ blog }) => {
                 </h2>
             </Link>
 
-                <p className='text-[#C4C4C4] text-start'>
+                <p className='text-[#C4C4C4] text-start flex items-end'>
                     {daysSinceCreation === 0
                         ? 'Created today'
                         : `Created ${daysSinceCreation} ${daysSinceCreation === 1 ? 'day' : 'days'
