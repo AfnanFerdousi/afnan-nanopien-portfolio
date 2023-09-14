@@ -93,7 +93,7 @@ const Service = () => {
 
                                         <div className="py-10">
                                             <h2 className="font-Raleway font-semibold text-2xl text-[#fff] ">{data?.title}</h2>
-                                            <p className="font-montserrat text-md text-[#C4C4C4] pt-6">{data?.desc}</p>
+                                            <p className="font-montserrat lg:md:text-md text-[#C4C4C4] pt-6 text-[12px]">{data?.desc}</p>
                                         </div>
 
                                         {/* <button
