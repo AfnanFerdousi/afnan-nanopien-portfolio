@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useRef } from 'react';
 import Image from "next/image";
 import fb from '../../public/fb.png'
@@ -66,7 +67,7 @@ const Stats = () => {
                             <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pb-8">
-                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>40</h2>
                             <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
                         </div>
                     </div>
@@ -77,8 +78,8 @@ const Stats = () => {
                             <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pt-8">
-                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
-                            <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>80</h2>
+                            <p className="lg:md:text-lg text-[12px] w-max">Video Created</p>
                         </div>
                     </div>
                 </div>
@@ -99,8 +100,8 @@ const Stats = () => {
                             <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pb-8">
-                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
-                            <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>3</h2>
+                            <p className="lg:md:text-lg text-[12px] w-max">Company Collaboration</p>
                         </div>
                     </div>
                     <hr className="lg:md:w-42 lg:md:block hidden  border-t-2 border-gray-700" /> {/* Add a short horizontal line here */}
@@ -109,8 +110,8 @@ const Stats = () => {
                             <Image src="https://i.ibb.co/sHqkJMP/image.png" alt="plus" width={40} height={40} className="lg:md:w-[40px] lg:md:h-[40px] w-[20px] h-[20px]" />
                         </div>
                         <div className="pt-8">
-                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>100</h2>
-                            <p className="lg:md:text-lg text-[12px] w-max">Projects Finished</p>
+                            <h2 className='font-montserrat font-semibold lg:md:text-8xl text-4xl'>75</h2>
+                            <p className="lg:md:text-lg text-[12px] w-max">Github Repo's</p>
                         </div>
                     </div>
                 </div>
