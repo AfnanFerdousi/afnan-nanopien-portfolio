@@ -12,43 +12,6 @@ const Projects = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' });
     const [projects, setProjects] = useState([])
     // Mockup data for projects
-    const projects = [
-        {
-            title: "Project 1",
-            description: "Description for Project 1",
-            imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
-            liveLink: "https://example.com/project1", // Replace with your live link URL
-            githubLink: "https://github.com/yourusername/project1", // Replace with your GitHub link URL
-        },
-        {
-            title: "Project 2",
-            description: "Description for Project 2",
-            imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
-            liveLink: "https://example.com/project2", // Replace with your live link URL
-            githubLink: "https://github.com/yourusername/project2", // Replace with your GitHub link URL
-        },
-        {
-            title: "Project 3",
-            description: "Description for Project 3",
-            imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
-            liveLink: "https://example.com/project3", // Replace with your live link URL
-            githubLink: "https://github.com/yourusername/project3", // Replace with your GitHub link URL
-        },
-        {
-            title: "Project 4",
-            description: "Description for Project 4",
-            imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
-            liveLink: "https://example.com/project4", // Replace with your live link URL
-            githubLink: "https://github.com/yourusername/project4", // Replace with your GitHub link URL
-        },
-        {
-            title: "Project 5",
-            description: "Description for Project 5",
-            imageUrl: "https://i.ibb.co/rmKCBKP/perfumo-mock-up.png", // Replace with your image URL
-            liveLink: "https://example.com/project5", // Replace with your live link URL
-            githubLink: "https://github.com/yourusername/project5", // Replace with your GitHub link URL
-        },
-    ];
   useEffect(() => {
         const getProjects = async () => {
             try {
