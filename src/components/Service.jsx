@@ -46,7 +46,6 @@ const Service = () => {
         const getServices = async () => {
             try {
                 const res = await axios.get('https://afnan-portfolio-server.vercel.app/api/v1/services');
-                console.log(res?.data?.data)
                 setServices(res?.data?.data);
             } catch (error) {
                 console.error('Error fetching services:', error);

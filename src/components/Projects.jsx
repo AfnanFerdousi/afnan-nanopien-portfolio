@@ -39,7 +39,6 @@ const Projects = () => {
         const getProjects = async () => {
             try {
                 const res = await axios.get('https://afnan-portfolio-server.vercel.app/api/v1/projects');
-                console.log(res?.data?.data)
                 setProjects(res?.data?.data);
             } catch (error) {
                 console.error('Error fetching projects:', error);
@@ -51,7 +50,6 @@ const Projects = () => {
     // Define different card sizes based on position
      const displayedProjects = projects && projects?.length > 0 ? projects.slice(0, 5) : [];
     const cardSizes = ['w-1/2', 'w-1/3', 'w-1/4', 'w-1/3', 'w-1/4'];
-console.log(projects)
     return (
         <div className="lg:md:py-40 py-20 px-8" >
              <div

@@ -31,12 +31,10 @@ const SingleBlog = () => {
         };
     }, []);
     const [blog, setBlog] = useState([]);
-    console.log(router)
     useEffect(() => {
         const getBlogs = async () => {
             try {
                 const res = await axios.get(`https://afnan-portfolio-server.vercel.app/api/v1/blogs/${router?.query?.id}`);
-                console.log(res?.data?.data)
                 setBlog(res?.data?.data);
             } catch (error) {
                 console.error('Error fetching blogs:', error);
@@ -58,7 +56,6 @@ const SingleBlog = () => {
 
     const daysSinceCreation = getTimeDifference(blog.createdAt);
 
-    console.log(blog)
     return (
         <div>
             <Head>

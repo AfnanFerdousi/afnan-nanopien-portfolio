@@ -39,8 +39,6 @@ const Blogs = ({ limit }) => {
         const getBlogs = async () => {
             try {
                 const res = await axios.get('https://afnan-portfolio-server.vercel.app/api/v1/blogs');
-                console.log(res?.data?.data)
-                setBlogs(res?.data?.data);
             } catch (error) {
                 console.error('Error fetching blogs:', error);
             }
