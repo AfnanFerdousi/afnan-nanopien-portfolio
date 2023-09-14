@@ -48,6 +48,7 @@ const Stats = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    const isSmallDevice = window.innerWidth <= 480;
     return (
         <div>
 
@@ -57,9 +58,16 @@ const Stats = () => {
                     className='blob2'
                     style={{ filter: 'blur(100px)' }}
                 ></div>
-                <div data-aos="fade-right"
-                    data-aos-duration="3000"
-                    data-aos-offset="100"
+                <div
+                    {...(!isSmallDevice ? {
+                        "data-aos": "fade-right",
+                        "data-aos-duration": "3000",
+                        "data-aos-offset": "100",
+                    } : {
+                        "data-aos": "fade-up",
+                        "data-aos-duration": "3000",
+                        "data-aos-offset": "100",
+                    })}
                     className='flex flex-col items-start'
                 // data-aos-easing="ease-in-sine"
                 >
@@ -91,9 +99,16 @@ const Stats = () => {
                     data-aos-offset="100">
                     <Image src="https://i.ibb.co/ccXwJLT/Group-61.png" alt="blob" height={200} width={200} />
                 </div>
-                <div data-aos="fade-left"
-                    data-aos-duration="3000"
-                    data-aos-offset="100"
+                <div
+                     {...(!isSmallDevice ? {
+                        "data-aos": "fade-left",
+                        "data-aos-duration": "3000",
+                        "data-aos-offset": "100",
+                    } : {
+                        "data-aos": "fade-up",
+                        "data-aos-duration": "3000",
+                        "data-aos-offset": "100",
+                    })}
                     className="flex flex-col items-end"
                 // data-aos-easing="ease-in-sine"
                 >
