@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
@@ -64,7 +65,7 @@ const Contact = () => {
     className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
       <div
                     ref={blobRef}
-                    className='blob w-[80px] h-[80px]'
+                    className='blob w-[80px] h-[80px] overflow-y-hidden'
                     style={{ filter: 'blur(100px)' }}
                 ></div>
       <div
@@ -72,10 +73,10 @@ const Contact = () => {
         className="h-[50vh] text-center flex flex-col items-center justify-center py-10 "
       >
         <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center">
-          Let’s check my projects
+          Let’s Work Together!
         </h2>
         <p className="font-montserrat lg:md:text-lg text-[14px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] text-center my-4 mx-auto">
-          As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies.
+          Connect with Me: Reach Out for Collaboration, Questions, or Simply a Friendly Conversation - I'm Here to Hear from You
         </p>
 
         <button onClick={() => document.getElementById('my_modal_3').showModal()}

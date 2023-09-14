@@ -66,7 +66,7 @@ console.log(projects)
                 <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center'>
                     Let’s check my projects
                 </h2>
-                <p className='font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:my-4  mx-auto'>As a firm believer in continuous learning, I stay up-to-date with the latest advancements in web technologies.</p>
+                <p className='font-montserrat lg:md:text-lg text-[16px] text-[#C4C4C4] lg:md:w-[50%] w-[100% text-center lg:md:my-4  mx-auto'>Embark on a Journey Through My Diverse and Innovative Web Projects Showcase, Where I Keep Abreast of the Latest Trends and Technologies in the Field</p>
                 {
                     isSmMd ? (
                         <Swiper
