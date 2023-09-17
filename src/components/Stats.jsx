@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from "next/image";
 import fb from '../../public/fb.png'
 import github from '../../public/github.png'
@@ -8,6 +8,7 @@ import linkedin from '../../public/linkedin.png'
 import { randomBlob } from '@/hooks/randomBlob';
 
 const Stats = () => {
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
     const socials = [
         {
@@ -31,8 +32,10 @@ const Stats = () => {
     useEffect(() => {
         const blob = blobRef.current;
         const handleResize = () => {
+            setWindowWidth(typeof window !== 'undefined' ? window.innerWidth : 0); // Update the window width when it changes
             randomBlob(blobRef);
         };
+
 
         // Randomize the initial position
         randomBlob(blobRef);
@@ -48,7 +51,7 @@ const Stats = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-    const isSmallDevice = window.innerWidth <= 480;
+    const isSmallDevice = windowWidth <= 480;
     return (
         <div>
 
