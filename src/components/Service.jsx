@@ -57,7 +57,7 @@ const Service = () => {
 
 
     return (
-        <div className="px-8 lg:md:py-40 py-20">
+        <div className="px-8 lg:md:py-30 py-20">
             <div
                 ref={blobRef}
                 className='blob'

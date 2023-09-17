@@ -12,7 +12,7 @@ import { randomBlob } from '@/hooks/randomBlob';
 
 const Projects = () => {
     const isSmMd = useMediaQuery({ query: '(max-width: 768px)' });
-       const blobRef = useRef(null);
+    const blobRef = useRef(null);
     useEffect(() => {
         const blob = blobRef.current;
         const handleResize = () => {
@@ -35,7 +35,7 @@ const Projects = () => {
     }, []);
     const [projects, setProjects] = useState([])
     // Mockup data for projects
-  useEffect(() => {
+    useEffect(() => {
         const getProjects = async () => {
             try {
                 const res = await axios.get('https://afnan-portfolio-server.vercel.app/api/v1/projects');
@@ -48,15 +48,15 @@ const Projects = () => {
         getProjects();
     }, []);
     // Define different card sizes based on position
-     const displayedProjects = projects && projects?.length > 0 ? projects.slice(0, 5) : [];
+    const displayedProjects = projects && projects?.length > 0 ? projects.slice(0, 5) : [];
     const cardSizes = ['w-1/2', 'w-1/3', 'w-1/4', 'w-1/3', 'w-1/4'];
     return (
-        <div className="lg:md:py-40 py-20 px-8" >
-             <div
-                    ref={blobRef}
-                    className='blob'
-                    style={{ filter: 'blur(80px)' }}
-                ></div>
+        <div className="lg:md:py-30 py-20 px-8" >
+            <div
+                ref={blobRef}
+                className='blob'
+                style={{ filter: 'blur(80px)' }}
+            ></div>
             <div
                 data-aos="fade-up"
                 data-aos-duration="3000"

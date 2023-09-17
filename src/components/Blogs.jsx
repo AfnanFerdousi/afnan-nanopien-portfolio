@@ -50,12 +50,12 @@ const Blogs = ({ limit }) => {
 
     // Limit the number of displayed blogs to the specified limit
     const displayedBlogs = blogs && blogs?.length > 0 ? blogs.slice(0, 3) : [];
-console.log(blogs)
+    console.log(blogs)
     return (
         <div
             data-aos="fade-up"
             data-aos-duration="3000"
-            className='px-10 lg:md:py-40 py-20 text-center'>
+            className='px-10 lg:md:py-30 py-20 text-center'>
             <div
                 ref={blobRef}
                 className='blob2'

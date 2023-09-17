@@ -30,7 +30,7 @@ const Resume = () => {
             company: 'GenRes',
             logo: genres,
             date: 'June 2022 - Feb 2023',
-            width: 50, 
+            width: 50,
         },
     ];
     const skills = [
@@ -49,7 +49,7 @@ const Resume = () => {
         "Typescript",
         "Redux",
         "Firebase",
-        "Prisma",        
+        "Prisma",
     ]
     const tools = [
         {
@@ -98,7 +98,7 @@ const Resume = () => {
             logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png"
         }
     ]
-       const blobRef = useRef(null);
+    const blobRef = useRef(null);
     useEffect(() => {
         const blob = blobRef.current;
         const handleResize = () => {
@@ -124,12 +124,12 @@ const Resume = () => {
         <div
             data-aos="fade-up"
             data-aos-duration="2000"
-            className="px-10 lg:md:py-40 py-20">
-                 <div
-                    ref={blobRef}
-                    className='blob2'
-                    style={{ filter: 'blur(100px)' }}
-                ></div>
+            className="px-10 lg:md:py-30 py-20">
+            <div
+                ref={blobRef}
+                className='blob2'
+                style={{ filter: 'blur(100px)' }}
+            ></div>
             <div className="rounded-xl px-6 py-12" style={{ background: 'rgba(217, 217, 217, 0.1)' }}>
                 {/* header */}
                 <div className="flex items-center justify-between">
@@ -154,8 +154,8 @@ const Resume = () => {
                             </h2>
                         </div>
                         <hr className="w-42  border-t-2 border-gray-700" />
-                        <p className="pt-6 lg:md:text-[16px] text-[12px]">                         
-                           I'm a young and energetic MERN Stack Developer who's passionate about learning and staying on the cutting edge of technology. I love picking up new skills quickly and staying in tune with the latest industry trends. My main goal is to use my skills to make a positive impact in the world. In addition to my technical abilities, I'm a great communicator, which helps me collaborate effectively with diverse teams. I bridge the gap between developers and other stakeholders to ensure successful projects. I'm committed to using my knowledge to create solutions that not only meet but surpass user and client expectations, ultimately making a real difference in the digital world.
+                        <p className="pt-6 lg:md:text-[16px] text-[12px]">
+                            I'm a young and energetic MERN Stack Developer who's passionate about learning and staying on the cutting edge of technology. I love picking up new skills quickly and staying in tune with the latest industry trends. My main goal is to use my skills to make a positive impact in the world. In addition to my technical abilities, I'm a great communicator, which helps me collaborate effectively with diverse teams. I bridge the gap between developers and other stakeholders to ensure successful projects. I'm committed to using my knowledge to create solutions that not only meet but surpass user and client expectations, ultimately making a real difference in the digital world.
                         </p>
                     </div>
                     <hr className="w-42  border-t-2 border-gray-700 mt-12 mb-6 lg:md:hidden block" />
