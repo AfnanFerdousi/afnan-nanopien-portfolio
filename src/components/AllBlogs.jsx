@@ -48,7 +48,7 @@ const AllBlogs = () => {
 
     return (
         <div
-            className='px-10 pt-10 pb-20'>
+            className='px-8 pt-10 pb-20'>
                  <div
                     ref={blobRef}
                     className='blob'

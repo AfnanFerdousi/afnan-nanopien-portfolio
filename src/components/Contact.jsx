@@ -7,28 +7,28 @@ import { randomBlob } from '@/hooks/randomBlob';
 
 
 const Contact = () => {
-  const { register, handleSubmit,reset, errors } = useForm();
+  const { register, handleSubmit, reset, errors } = useForm();
   const blobRef = useRef(null);
-    useEffect(() => {
-        const blob = blobRef.current;
-        const handleResize = () => {
-            randomBlob(blobRef);
-        };
+  useEffect(() => {
+    const blob = blobRef.current;
+    const handleResize = () => {
+      randomBlob(blobRef);
+    };
 
-        // Randomize the initial position
-        randomBlob(blobRef);
+    // Randomize the initial position
+    randomBlob(blobRef);
 
-        window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-        const intervalId = setInterval(() => {
-            randomBlob(blobRef);
-        }, 4000);
+    const intervalId = setInterval(() => {
+      randomBlob(blobRef);
+    }, 4000);
 
-        return () => {
-            clearInterval(intervalId);
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    return () => {
+      clearInterval(intervalId);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const sendEmail = async (data) => {
     try {
       await axios.post('https://afnan-portfolio-server.vercel.app/api/v1/contact/sendEmail', data);
@@ -59,18 +59,18 @@ const Contact = () => {
     }
   };
   return (
-    <div 
+    <div
       data-aos="fade-up"
       data-aos-duration="3000"
-    className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
+      className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
       <div
-                    ref={blobRef}
-                    className='blob w-[80px] h-[80px] overflow-y-hidden'
-                    style={{ filter: 'blur(100px)' }}
-                ></div>
+        ref={blobRef}
+        className='blob w-[80px] h-[80px] overflow-y-hidden'
+        style={{ filter: 'blur(100px)' }}
+      ></div>
       <div
-       
-        className="h-[50vh] text-center flex flex-col items-center justify-center py-10 "
+
+        className="lg:md:h-[50vh] h-[30vh] text-center flex flex-col items-center justify-center py-10 "
       >
         <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center">
           Let’s Work Together!
@@ -99,13 +99,13 @@ const Contact = () => {
               <div className="mb-4 flex flex-col">
                 <label htmlFor="name" className=" text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
                   <span className="lg:md:text-lg text-md text-[#6f7582]">01</span>
-                  <span>What’s your name?</span>                
+                  <span>What’s your name?</span>
                 </label>
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-8 py-2 px-4 border-[0px] border-transparent"
+                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-6 py-2 px-4 border-[0px] border-transparent"
                   placeholder="Afnan Ferdousi*"
                   {...register("name", {
                     required: {
@@ -113,24 +113,24 @@ const Contact = () => {
                       message: 'Name is required'
                     }
                   })}
-                      />
-                      { errors?.name && <p>{errors?.name?.message}</p> }
-                       <hr className="w-42 border-t-2 border-gray-700 mt-2 mb-6 " />
+                />
+                {errors?.name && <p>{errors?.name?.message}</p>}
+                <hr className="w-42 border-t-2 border-gray-700 mt-2 mb-6 " />
               </div>
 
               <div className="mb-4 flex flex-col">
                 <label htmlFor="email" className=" text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
-                  
-               <span className="lg:md:text-lg text-md text-[#6f7582]">02</span>
-               <span>What’s your email?</span>
+
+                  <span className="lg:md:text-lg text-md text-[#6f7582]">02</span>
+                  <span>What’s your email?</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-8 py-2 px-4 border-[0px] border-transparent"
+                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-6 py-2 px-4 border-[0px] border-transparent"
                   placeholder="afnan@gmail.com*"
-                   {...register("email", {
+                  {...register("email", {
                     required: {
                       value: true,
                       message: 'Email is required'
@@ -143,15 +143,15 @@ const Contact = () => {
 
               <div className="mb-4 flex flex-col">
                 <label htmlFor="message" className=" text-white lg:md:text-lg text-md flex items-center gap-x-4 mb-2 font-montserrat text-start">
-                 <span className="lg:md:text-lg text-md text-[#6f7582]">03</span>
-                 <span>Your message</span>
+                  <span className="lg:md:text-lg text-md text-[#6f7582]">03</span>
+                  <span>Your message</span>
                 </label>
                 <textarea
                   name="message"
                   id="message"
-                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-8 py-2 px-4 border-[0px] border-transparent"
+                  className="bg-transparent placeholder:text-md placeholder:text-[#6f7582] ml-6 py-2 px-4 border-[0px] border-transparent"
                   placeholder="Hey Afnan, can you hwlp me with....*"
-                    {...register("message", {
+                  {...register("message", {
                     required: {
                       value: true,
                       message: 'Message is required'

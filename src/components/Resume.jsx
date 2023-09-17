@@ -124,7 +124,7 @@ const Resume = () => {
         <div
             data-aos="fade-up"
             data-aos-duration="2000"
-            className="px-10 lg:md:py-30 py-20">
+            className="lg:md:px-8 px-4 lg:md:py-30 py-20">
             <div
                 ref={blobRef}
                 className='blob2'

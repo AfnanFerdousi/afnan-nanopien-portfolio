@@ -55,7 +55,7 @@ const Blogs = ({ limit }) => {
         <div
             data-aos="fade-up"
             data-aos-duration="3000"
-            className='px-10 lg:md:py-30 py-20 text-center'>
+            className='lg:md:px-8 px-4 lg:md:py-30 py-20 text-center'>
             <div
                 ref={blobRef}
                 className='blob2'
