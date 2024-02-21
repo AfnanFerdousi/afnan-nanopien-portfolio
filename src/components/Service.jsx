@@ -57,7 +57,8 @@ const Service = () => {
 
 
     return (
-        <div className="lg:md:px-8 px-4 lg:md:py-30 py-20">
+        <div className="lg:md:px-0 px-4 lg:md:py-30 py-20">
+        <div className="max-w-[1380px] mx-auto w-full">
             <div
                 ref={blobRef}
                 className='blob'
@@ -66,7 +67,7 @@ const Service = () => {
             <div
                 data-aos="fade-down"
                 data-aos-duration="2000"
-                className="lg:md:flex justify-between lg:md:text-start text-center">
+                className="lg:md:flex justify-between lg:md:text-start text-center w-full">
                 <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff]">
                     Expertise service!
                     <span>Let’s check it out.</span>
@@ -127,6 +128,7 @@ const Service = () => {
                     ))}
                 </div>
             )}
+        </div>
         </div>
     );
 };

@@ -62,7 +62,7 @@ const Banner = () => {
                     <div className="avatar">
                         <div className="w-24 rounded-full">
                             <Image
-                                src="https://i.ibb.co/whYZChx/afnan.jpg"
+                                src="https://i.ibb.co/CHL8JRC/6b1b42ec-16cf-44a3-87da-49c5fbddba5f.jpg"
                                 alt="Afnan Ferdousi"
                                 objectFit="cover"
                                 objectPosition="center"

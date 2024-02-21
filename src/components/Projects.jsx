@@ -51,7 +51,8 @@ const Projects = () => {
     const displayedProjects = projects && projects?.length > 0 ? projects.slice(0, 5) : [];
     const cardSizes = ['w-1/2', 'w-1/3', 'w-1/4', 'w-1/3', 'w-1/4'];
     return (
-        <div className="lg:md:py-30 py-20 px-8" >
+        <div className="lg:md:py-30 py-20 lg:md:px-0 px-4" >
+        <div>
             <div
                 ref={blobRef}
                 className='blob'
@@ -60,9 +61,9 @@ const Projects = () => {
             <div
                 data-aos="fade-up"
                 data-aos-duration="3000"
-                className='text-center'>
+                className='text-center max-w-[1380px] mx-auto w-full'>
                 <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center'>
-                    Let’s check my projects
+                    Check Out My projects
                 </h2>
                 <p className='font-montserrat lg:md:text-lg text-[12px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] text-center mt-4 lg:md:mx-auto'>Embark on a Journey Through My Diverse and Innovative Web Projects Showcase, Where I Keep Abreast of the Latest Trends and Technologies in the Field</p>
                 {
@@ -99,14 +100,14 @@ const Projects = () => {
                                                         <AiOutlineGithub className="h-6 w-6 text-gray-400 hover:text-white transition-colors duration-300" />
                                                     </a>
                                                 </div>
-                                                <a
+                                                {/* <a
                                                     href={project.liveLink}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="mt-4 flex gap-x-2 items-center text-[#fff] transition-colors duration-300 text-md font-montserrat hover:text-[#EF4765]"
                                                 >
                                                     Learn More <BsArrowRightShort className="text-2xl" />
-                                                </a>
+                                                </a> */}
                                             </div>
                                         </div>
                                     </div>
@@ -142,14 +143,6 @@ const Projects = () => {
                                                     <AiOutlineGithub className="h-6 w-6 text-gray-400 hover:text-white transition-colors duration-300" />
                                                 </a>
                                             </div>
-                                            <a
-                                                href={project.liveLink}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="mt-4 flex gap-x-2 items-center text-[#fff] transition-colors duration-300 text-md font-montserrat hover:text-[#EF4765]"
-                                            >
-                                                Learn More <BsArrowRightShort className="text-2xl" />
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -164,6 +157,7 @@ const Projects = () => {
                     Show All
                 </button>
             </div>
+        </div>
         </div>
     );
 };

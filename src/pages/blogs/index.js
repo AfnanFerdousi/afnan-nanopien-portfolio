@@ -3,6 +3,7 @@ import GIF from '@/components/shared/GIF';
 import HomeIcon from '@/components/shared/HomeIcon';
 import Head from 'next/head';
 import React from 'react';
+import Footer from '@/components/Footer';
 
 const Blog = () => {
     return (
@@ -15,6 +16,7 @@ const Blog = () => {
                 {/* Stick the GIF to the bottom-right corner */}
                 <GIF />
             </div>
+            <Footer/>
         </div>
     );
 };

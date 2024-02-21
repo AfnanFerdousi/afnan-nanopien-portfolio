@@ -53,9 +53,9 @@ const Stats = () => {
     }, []);
     const isSmallDevice = windowWidth <= 480;
     return (
-        <div>
+        <div className="max-w-[1380px] w-full mx-auto">
 
-            <div className='flex items-center justify-center px-8 lg:md:h-[80vh] h-[50vh] lg:md:gap-[8rem] gap-[3rem]'>
+            <div className='flex items-center justify-center px-8 lg:md:h-[70vh] h-[50vh] lg:md:gap-[8rem] gap-[3rem]'>
                 <div
                     ref={blobRef}
                     className='blob2'
@@ -100,7 +100,7 @@ const Stats = () => {
                     data-aos-duration="4000"
                     data-aos-easing="ease-in-sine"
                     data-aos-offset="100">
-                    <Image src="https://i.ibb.co/ccXwJLT/Group-61.png" alt="blob" height={200} width={200} />
+                    <Image src="https://i.ibb.co/vXMvzdy/logo.png" alt="blob" height={200} width={200} />
                 </div>
                 <div
                      {...(!isSmallDevice ? {

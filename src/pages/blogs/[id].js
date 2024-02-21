@@ -6,6 +6,7 @@ import GIF from '@/components/shared/GIF';
 import HomeIcon from '@/components/shared/HomeIcon';
 import { randomBlob } from '@/hooks/randomBlob';
 import Head from 'next/head';
+import Footer from '@/components/Footer';
 
 const SingleBlog = () => {
     const router = useRouter()
@@ -61,7 +62,7 @@ const SingleBlog = () => {
             <Head>
                 <title>{blog.title} || Afnan || Nanopien</title>
             </Head>
-            <div style={{ background: '#0F192E' }} className=' rounded-xl flex flex-col items-center px-10 relative py-8'>
+            <div style={{ background: '#0F192E' }} className=' rounded-xl flex flex-col items-center px-10 relative py-8 max-w-[1380px] mx-auto w-full lg:md:pt-6'>
                 <div
                     ref={blobRef}
                     className='blob2'
@@ -120,6 +121,8 @@ const SingleBlog = () => {
                 <HomeIcon />
 
             </div>
+
+            <Footer/>
         </div>
     );
 };

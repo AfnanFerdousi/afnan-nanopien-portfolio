@@ -13,12 +13,12 @@ const Resume = () => {
             title: 'Subject Matter Specialist(MERN)',
             company: 'Ostad',
             logo: ostad,
-            date: 'March 2023 - Present',
+            date: 'March 2023 - Feb 2024',
             width: 35, // Use a number instead of a string
         },
         {
             id: 2,
-            title: 'Head of Media and Communication',
+            title: 'Head of Media and Communication (vol)',
             company: 'Programming Hero',
             logo: ph,
             date: 'Aug 2023 - Present',
@@ -123,8 +123,10 @@ const Resume = () => {
     return (
         <div
             data-aos="fade-up"
-            data-aos-duration="2000"
-            className="lg:md:px-8 px-4 lg:md:py-30 py-20">
+            data-aos-duration="2000" className="max-w-[1380px] mx-auto w-full"
+            >
+        <div className="lg:md:px-0 px-4 lg:md:py-30 py-20"
+           >
             <div
                 ref={blobRef}
                 className='blob2'
@@ -221,6 +223,7 @@ const Resume = () => {
                 </div>
             </div>
         </div>
+         </div>
     );
 };
 

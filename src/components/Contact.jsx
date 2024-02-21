@@ -70,7 +70,7 @@ const Contact = () => {
       ></div>
       <div
 
-        className="lg:md:h-[50vh] h-[30vh] text-center flex flex-col items-center justify-center py-10 "
+        className="lg:md:h-[50vh] h-[30vh] text-center flex flex-col items-center justify-center py-10 max-w-[1380px] mx-auto w-full"
       >
         <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center">
           Let’s Work Together!

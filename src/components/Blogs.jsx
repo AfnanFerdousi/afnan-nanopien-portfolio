@@ -52,31 +52,40 @@ const Blogs = ({ limit }) => {
     const displayedBlogs = blogs && blogs?.length > 0 ? blogs.slice(0, 3) : [];
     console.log(blogs)
     return (
+        <div className='max-w-[1380px] mx-auto w-full'>
         <div
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            className='lg:md:px-8 px-4 lg:md:py-30 py-20 text-center'>
+            // data-aos="fade-up"
+            // data-aos-duration="3000"
+            className='lg:md:px-0 px-4 lg:md:py-30 py-20 text-center'>
             <div
                 ref={blobRef}
                 className='blob2'
                 style={{ filter: 'blur(100px)' }}
             ></div>
-            <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center'>
-                Let’s check my Blogs
-            </h2>
-            <p className='font-montserrat lg:md:text-lg text-[12px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] text-center mt-4 lg:md:mx-auto'>Embark on a Journey Through My Diverse and Informative Blog Posts, Where I Share Insights, Ideas, and Knowledge on Various Topics of Interest.</p>
+              <div
+                data-aos="fade-down"
+                data-aos-duration="2000"
+                className="lg:md:flex justify-between items-cemter lg:md:text-start text-center w-full">
+                <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] ">
+                    My View On Things 
+                    <span>Check It Out!</span>
+                </h2>
+                <p className="font-montserrat lg:md:text-lg text-[12px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] lg:md:text-start text-center lg:md:mt-0 mt-4">
+                   Embark on a Journey Through My Diverse and Informative Blog Posts, Where I Share Insights, Ideas, and Knowledge on Various Topics of Interest.
+                </p>
+            </div>
             {
                 isSmMd ? (
                     <Swiper
                         data-aos="fade-up"
                         data-aos-duration="2000"
-                        pagination={true} modules={[Pagination]} className="mySwiper lg:md:mt-0 mt-10">
+                        pagination={true} modules={[Pagination]} className="mySwiper lg:md:mt-16 mt-10">
                         {
                             displayedBlogs.map(blog => <SwiperSlide key={blog._id} className=" pb-8"><Blog blog={blog}></Blog></SwiperSlide>)
                         }
                     </Swiper>
                 ) : (
-                    <div className="grid lg:md:grid-cols-3 grid-cols-1 pb-8 gap-5">
+                    <div className="grid lg:md:grid-cols-3 grid-cols-1 pb-8 gap-5 lg:md:mt-16 mt-10">
                         {
                             displayedBlogs.map(blog => <Blog key={blog._id} blog={blog}></Blog>)
                         }
@@ -91,6 +100,7 @@ const Blogs = ({ limit }) => {
                     Show All
                 </button>
             )}
+        </div>
         </div>
     );
 };
