@@ -21,7 +21,7 @@ export default function Home() {
         <Contact/>
         <Footer/>
         {/* Stick the GIF to the bottom-right corner */}
-       {/* <GIF/> */}
+       <GIF/>
       </div>
     </div>
   );
