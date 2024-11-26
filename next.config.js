@@ -4,6 +4,8 @@ const nextConfig = {
   images: {
     domains: [
       'i.ibb.co',
+      'i.ibb.co.com',
+      "ibb.co.com",
       'usagif.com',
       'i.pinimg.com',
       'i.redd.it',

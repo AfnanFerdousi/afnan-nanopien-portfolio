@@ -23,6 +23,7 @@ body {
     background: rgb(5, 15, 37);
     overflow-x: hidden;
     scrollbar-width: thin; /* For Firefox */
+     scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -99,6 +100,17 @@ body::-webkit-scrollbar-track {
 .serviceCard:hover {
     background: #eee;
 }
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
 
 @keyframes blink {
     0%, 100% {

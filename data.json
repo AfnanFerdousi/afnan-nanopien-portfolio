@@ -1,0 +1,73 @@
+[
+    {
+        "title": "KOC Freelancing",
+        "description": "A platform for freelancing and job opportunities, designed to connect employers with skilled freelancers efficiently.",
+        "imageUrl": "https://i.ibb.co.com/7J6T0Kv/image.png",
+        "liveLink": "http://kocfreelancing.com/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "Amber Alert for Bangladesh",
+        "description": "An initiative modeled on the global AMBER Alert system, focusing on child safety and rapid responses to abduction cases in Bangladesh.",
+        "imageUrl": "https://i.ibb.co.com/vcLsf0n/image.png",
+        "liveLink": "http://amberalert4bangladesh.org/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "BloodLink Web",
+        "description": "Web-based interface for BloodLink, facilitating seamless user interactions for blood donation and search functionalities.",
+        "imageUrl": "https://i.ibb.co.com/RyRS4Yc/image.png",
+        "liveLink": "https://www.bloodlinkapp.org/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "BloodLink App",
+        "description": "A comprehensive platform for connecting blood donors and recipients, with mobile app and web support for managing donations.",
+        "imageUrl": "https://i.ibb.co.com/NsdmKQS/image.png",
+        "liveLink": "https://bloodlink.app/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "Bloodlink Comic",
+        "description": "A dynamic and user-friendly booking system developed for event management and appointments.",
+        "imageUrl": "https://i.ibb.co.com/g7v5Tgz/image.png",
+        "liveLink": "https://blorg.co/book",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "HF Consultancy",
+        "description": "A modern consultancy website for delivering professional services in business strategy and management.",
+        "imageUrl": "https://i.ibb.co.com/Yk7J2Yt/image.png",
+        "liveLink": "https://hfconsultancy.net/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "Syscomatic Musical",
+        "description": "A creative portfolio website showcasing a variety of projects with a focus on UI/UX and interactive design.",
+        "imageUrl": "https://i.ibb.co.com/yqnsVN2/image.png",
+        "liveLink": "https://syscomatic-musical.vercel.app/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "DigiMarketing",
+        "description": "A landing page for digital marketing services, featuring creative designs and responsive layouts.",
+        "imageUrl": "https://i.ibb.co.com/4M15CTq/image.png",
+        "liveLink": "https://digimarketing-client.vercel.app/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "title": "Coder Squad",
+        "description": "A collaborative platform for coding bootcamps, workshops, and learning management systems.",
+        "imageUrl": "https://i.ibb.co.com/hRjQgTS/image.png",
+        "liveLink": "https://coder-squad-client.vercel.app/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    },
+    {
+        "_id": "6502b59b039d91dd98e02168",
+        "title": "Eternal Prints",
+        "description": "An e-commerce platform for personalized print products, offering a smooth shopping experience.",
+        "imageUrl": "https://i.ibb.co.com/g3v5Gvf/image.png",
+        "liveLink": "https://eternalprints.net/",
+        "createdAt": "2024-11-26T02:18:13.352Z"
+    }
+]

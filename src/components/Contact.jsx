@@ -62,7 +62,7 @@ const Contact = () => {
     <div
       data-aos="fade-up"
       data-aos-duration="3000"
-      className=" px-0 mx-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl">
+      className=" px-0 bg-gradient-to-r from-[#0F192E] to-[#C23E5A] my-auto rounded-xl max-w-[1440px] w-full mx-auto">
       <div
         ref={blobRef}
         className='blob w-[80px] h-[80px] overflow-y-hidden'

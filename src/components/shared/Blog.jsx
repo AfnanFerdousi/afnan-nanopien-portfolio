@@ -20,9 +20,10 @@ const Blog = ({ blog }) => {
     return (
         <div style={{ background: 'rgba(217, 217, 217, 0.1)' }} className='p-4 rounded-xl flex flex-col '>
             <Image
-                className='rounded-xl lg:md:h-[50vh] h-[35vh] w-full'
+                className='rounded-xl lg:md:h-full h-[35vh] w-full object-cover'
                 src={blog.image}
                 alt={blog.title}
+                objectFit="cover"
                 width={300}
                 height={200}
             />
@@ -44,7 +45,9 @@ const Blog = ({ blog }) => {
                 </h2>
             </Link>
 
-                <p className='text-[#C4C4C4] text-start flex items-end'>
+               <p className='text-[#C4C4C4] text-start my-2'>{blog.content.split(' ').slice(0, 10).join(' ')}...</p>
+
+                <p className='text-[#fff] text-start flex items-end text-sm w-full'>
                     {daysSinceCreation === 0
                         ? 'Created today'
                         : `Created ${daysSinceCreation} ${daysSinceCreation === 1 ? 'day' : 'days'

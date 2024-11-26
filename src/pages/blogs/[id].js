@@ -112,7 +112,7 @@ const SingleBlog = () => {
                         </div>
                         <div>
                             <h2 className='font-montserrat font-medium text-[#fff] lg:md:text-lg text-md'>Afnan Ferdousi</h2>
-                            <span className='text-sm font-montserrat text-[#C4C4C4]'>Subject Matter Specialist (MERN) at <a href='http://ostad.app/' target="_blank" noopener>Ostad</a> </span>
+                            <span className='text-sm font-montserrat text-[#C4C4C4]'>Co-Founder & Software Engineer at <a href='https://www.dreabuild.com/' target="_blank" noopener className='font-bold underline'>Dreabuild</a> </span>
                         </div>
 
                     </div>

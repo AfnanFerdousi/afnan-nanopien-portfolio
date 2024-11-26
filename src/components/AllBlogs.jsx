@@ -50,7 +50,7 @@ const AllBlogs = () => {
 
     return (
         <div
-            className='px-8 pt-10 pb-20 max-w-[1380px] w-full mx-auto'>
+            className='px-8 pt-10 pb-20 max-w-[1440px] w-full mx-auto'>
                  <div
                     ref={blobRef}
                     className='blob'
@@ -60,7 +60,7 @@ const AllBlogs = () => {
             <h2 className='font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] text-center lg:md:mt-6'>
                 Let’s check my Blogs
             </h2>
-            <p className='font-montserrat lg:md:text-lg text-[12px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] text-center lg:md:mt-2 mt-4 mx-auto'>Embark on a Journey Through My Diverse and Informative Blog Posts, Where I Share Insights, Ideas, and Knowledge on Various Topics of Interest.</p>
+            <p className='font-montserrat lg:md:text-lg text-[12px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] text-center lg:md:mt-2 mt-4 mx-auto'>Here are some articles I wrote on various things I am interested on</p>
             {
                 isSmMd ? (
                     <Swiper

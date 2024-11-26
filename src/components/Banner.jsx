@@ -64,7 +64,6 @@ const Banner = () => {
                             <Image
                                 src="https://i.ibb.co/CHL8JRC/6b1b42ec-16cf-44a3-87da-49c5fbddba5f.jpg"
                                 alt="Afnan Ferdousi"
-                                objectFit="cover"
                                 objectPosition="center"
                                 quality={100}
                                 width={150}

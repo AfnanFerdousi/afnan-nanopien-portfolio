@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import dots from '../../public/dots.png';
 import ostad from '../../public/ostad.png';
+import dreabuild from '../../public/dreabuild.png';
 import ph from '../../public/ph.png';
 import genres from '../../public/genres.png';
 import { randomBlob } from '@/hooks/randomBlob';
@@ -10,19 +11,19 @@ const Resume = () => {
     const experience = [
         {
             id: 1,
+            title: 'Co-founder & Software Engineer',
+            company: 'Dreabuild',
+            logo: dreabuild,
+            date: 'Oct 2024 - Present',
+            width: 35, // Use a number instead of a string
+        },
+        {
+            id: 2,
             title: 'Subject Matter Specialist(MERN)',
             company: 'Ostad',
             logo: ostad,
             date: 'March 2023 - Feb 2024',
             width: 35, // Use a number instead of a string
-        },
-        {
-            id: 2,
-            title: 'Head of Media and Communication (vol)',
-            company: 'Programming Hero',
-            logo: ph,
-            date: 'Aug 2023 - Present',
-            width: 55, // Use a number instead of a string
         },
         {
             id: 3,
@@ -34,8 +35,6 @@ const Resume = () => {
         },
     ];
     const skills = [
-        "HTML",
-        "CSS",
         "JavaScript",
         "ReactJs",
         "NextJs",
@@ -50,6 +49,9 @@ const Resume = () => {
         "Redux",
         "Firebase",
         "Prisma",
+        "OpenAI",
+        "Payload",
+        "SocketIo",
     ]
     const tools = [
         {
@@ -60,7 +62,7 @@ const Resume = () => {
         {
             id: 2,
             name: "Github",
-            logo: "https://cutewallpaper.org/24/github-logo-png/github-logo-icon-free-download-on-iconfinder.png",
+            logo: "https://i.ibb.co.com/zF783pq/image.png",
         },
         {
             id: 3,
@@ -125,7 +127,7 @@ const Resume = () => {
             data-aos="fade-up"
             data-aos-duration="2000" className="max-w-[1380px] mx-auto w-full"
             >
-        <div className="lg:md:px-0 px-4 lg:md:py-30 py-20"
+            <div className="lg:md:px-8 px-4 lg:md:py-30 py-20 max-w-[1440px] w-full mx-auto"
            >
             <div
                 ref={blobRef}
@@ -145,10 +147,10 @@ const Resume = () => {
                         <div className="flex items-center justify-between pb-6">
                             <h2 className="flex flex-col font-montserrat">
                                 <span className="lg:md:text-xl text-lg font-medium text-[#fff]">Afnan Ferdousi</span>
-                                <span className="lg:md:text-md text-[12px] text-[#C4C4C4]">MERN Stack Developer</span>
+                                <span className="lg:md:text-md text-[12px] text-[#C4C4C4]">Software Engineer</span>
                             </h2>
                             <h2 className="font-montserrat flex items-center gap-x-2">
-                                <span className="text-[#EF4765] lg:md:text-6xl text-5xl font-bold">2</span>
+                                <span className="text-[#EF4765] lg:md:text-6xl text-5xl font-bold">3</span>
                                 <span className="flex flex-col text-[#C4C4C4] lg:md:text-md text-[12px]">
                                     Years
                                     <span className="text-[#fff]">Experience </span>
@@ -157,7 +159,8 @@ const Resume = () => {
                         </div>
                         <hr className="w-42  border-t-2 border-gray-700" />
                         <p className="pt-6 lg:md:text-[16px] text-[12px]">
-                            I'm a young and energetic MERN Stack Developer who's passionate about learning and staying on the cutting edge of technology. I love picking up new skills quickly and staying in tune with the latest industry trends. My main goal is to use my skills to make a positive impact in the world. In addition to my technical abilities, I'm a great communicator, which helps me collaborate effectively with diverse teams. I bridge the gap between developers and other stakeholders to ensure successful projects. I'm committed to using my knowledge to create solutions that not only meet but surpass user and client expectations, ultimately making a real difference in the digital world.
+                           Hey! I am a software developer who loves to build things that work and look great. With a solid 3 years of experience in front-end technologies like Next Js, React Js, and TailwindCSS, and back-end work with Node.js, I enjoy tackling real-world challenges and making things come to life through code.
+                           I’m not about fancy titles or certifications—I prefer learning by doing. Whether it's a personal project or a team effort, I’m always experimenting, problem-solving, and finding creative ways to make the user experience better. I’m especially interested in AI integration, because, let’s face it, who wouldn’t want to create smarter applications?
                         </p>
                     </div>
                     <hr className="w-42  border-t-2 border-gray-700 mt-12 mb-6 lg:md:hidden block" />
@@ -167,7 +170,7 @@ const Resume = () => {
                                 <div className="flex items-center justify-between">
                                     <div>
                                         <h2 className="lg:md:text-lg text-md font-montserrat font-medium text-[#fff] mb-2">{exp?.title}</h2>
-                                        <Image style={{ width: `${exp?.width}%` }} className={`h-auto`} src={exp?.logo} alt="ostad" width="" height="" />
+                                        <Image style={{ width: `${exp?.width}%` }} className={`h-auto`} src={exp?.logo} alt="ostad" width="50" height="50" />
                                     </div>
                                     <h2 className={`py-2 px-6 lg:md:text-[15px] text-[12px] font-medium rounded-lg ${exp?.date.includes('Present') ? 'bg-[#EF4765] text-[#E0DEDE]' : 'bg-[#343957] text-[#E0DEDE]'
                                         }`}>

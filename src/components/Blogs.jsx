@@ -52,11 +52,11 @@ const Blogs = ({ limit }) => {
     const displayedBlogs = blogs && blogs?.length > 0 ? blogs.slice(0, 3) : [];
     console.log(blogs)
     return (
-        <div className='max-w-[1380px] mx-auto w-full'>
+        <div className='lg:md:px-8 px-4 lg:md:py-30 py-20 max-w-[1440px] w-full mx-auto'>
         <div
             // data-aos="fade-up"
             // data-aos-duration="3000"
-            className='lg:md:px-0 px-4 lg:md:py-30 py-20 text-center'>
+            className='lg:md:px-8 px-4 lg:md:py-30 py-20 text-center max-w-[1440px] w-full mx-auto'>
             <div
                 ref={blobRef}
                 className='blob2'
@@ -65,13 +65,13 @@ const Blogs = ({ limit }) => {
               <div
                 data-aos="fade-down"
                 data-aos-duration="2000"
-                className="lg:md:flex justify-between items-cemter lg:md:text-start text-center w-full">
+                className="lg:md:flex justify-between items-center lg:md:text-start text-center w-full">
                 <h2 className="font-Raleway font-bold lg:md:text-5xl text-3xl flex flex-col text-[#fff] ">
                     My View On Things 
                     <span>Check It Out!</span>
                 </h2>
                 <p className="font-montserrat lg:md:text-lg text-[12px] text-[#C4C4C4] lg:md:w-[50%] w-[100%] lg:md:text-start text-center lg:md:mt-0 mt-4">
-                   Embark on a Journey Through My Diverse and Informative Blog Posts, Where I Share Insights, Ideas, and Knowledge on Various Topics of Interest.
+                 Here are some articles I wrote on various things I am interested on. You can read them to learn more about me and how I think 
                 </p>
             </div>
             {
