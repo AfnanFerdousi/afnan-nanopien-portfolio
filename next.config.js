@@ -5,7 +5,7 @@ const nextConfig = {
     domains: [
       'i.ibb.co',
       'i.ibb.co.com',
-      "ibb.co.com",
+      'ibb.co.com',
       'usagif.com',
       'i.pinimg.com',
       'i.redd.it',
@@ -20,10 +20,14 @@ const nextConfig = {
       'static.wikia.nocookie.net',
       'assets.vercel.com',
       'media.licdn.com',
-      'scontent.fdac157-1.fna.fbcdn.net'
-      // Add 'cutewallpaper.org' to the domains array
+      'scontent.fdac157-1.fna.fbcdn.net',
+      'github.githubassets.com',
+      'www.vectorlogo.zone',
     ],
   },
+
+  // Transpile Three.js packages
+  transpilePackages: ['three'],
 };
 
 module.exports = nextConfig;
